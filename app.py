@@ -17,10 +17,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/get_ins_outs")
-def get_ins_outs():
-    inout = mongo.db.inout.find()
-    return render_template("in-out.html", inout = inout)
+@app.route("/get_recipes")
+def get_recipes():
+    recipes = mongo.db.inout.find()
+    return render_template("recipes.html", recipes = recipes)
 
 
 if __name__ == "__main__":
