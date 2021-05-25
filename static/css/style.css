@@ -81,3 +81,7 @@
 .signup-form form a:hover {
 	text-decoration: underline;
 }  
+
+.flash-message {
+    text-align: center;
+}
