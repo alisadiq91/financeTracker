@@ -16,6 +16,22 @@
             <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" pattern="^[a-zA-Z0-9]{7,15}$" minlength="7" maxlength="15" required>
             <small class="form-text text-muted">Must be between 7-15 characters. No special characters allowed eg. ! ?</small>
         </div>
+        <div class="form-group">
+            <i class="fas fa-utensils"></i>
+                    <select class="form-control mt-3" id="chef-level" name="chef-level" required>
+                        <option value="" disabled selected>Select your cooking level, be honest!</option>
+                        <option value="beginner" id="beginner" >Beginner</option>
+                        <option value="amateur" id="amateur">Amateur</option>
+                        <option value="accomplished"id="accomplished">Accomplished</option>
+                        <option value="advanced" id="advanced">Advanced</option>
+                        <option value="master" id="master">Master</option>
+                    </select>
+        </div>
+        <div class="form-group">
+            <i class="fas fa-heart"></i>
+            <input type="text" class="form-control mt-3" name="favourite" id="favourite" placeholder="Your favourite food" pattern="^[a-zA-Z0-9]{4,25}$" minlength="4" maxlength="25" required>
+        </div>
+
 		<div class="form-group">
             <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
         </div>
