@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="signup-form text-center">
+    <form method="POST" action="{{ url_for('register')}}"
+		<h2>Register</h2>
+		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" class="form-control mt-3" name="username" id="username" placeholder="Username" required="required">		  	
+        </div>
+		<div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+    </form>
+	<div>Already have an account? <a href="#">Sign in</a></div>
+</div>
+
+
+{% endblock %}
