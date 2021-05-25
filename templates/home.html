@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+            <h1 class="mt-5">Welcome to our Middle Eastern Cookbook!</h1>
+            <h3 class="mt-5">For you!</h3>
+            <h3 class="mt-5">Made by you!</h3>
+            <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See some recipes!</a>
+            <a href="#" class="btn btn-success mt-5">Add your own recipe!</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

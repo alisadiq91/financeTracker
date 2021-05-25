@@ -23,6 +23,11 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/go_home")
+def go_home():
+    return render_template("home.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
