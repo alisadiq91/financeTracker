@@ -1,8 +1,3 @@
-body {
-    background-color: black;
-    color: whitesmoke;
-}
-
 .form-control {
 	height: 40px;
 	box-shadow: none;
@@ -124,4 +119,8 @@ body {
   height: 25px; /* Slider handle height */
   background: yellow; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+.list-item {
+    list-style-type: none;
 }
