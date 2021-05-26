@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -97,8 +97,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        new_recipe = {
+            "category_name": request.form.get("category_name"),
+            "recipe-name": request.form.get("recipe-name"),
+            "description": request.form.get("description"),
+            "time": request.form.get("time"),
+            "difficulty": request.form.get("difficulty"),
+            "ingredients1": request.form.getlist("ingredients1"),
+            "method1": request.form.getlist("method1"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(new_recipe)
+        flash("Your recipe is now added!")
+        return redirect(url_for("get_recipes"))
     categories = mongo.db.categories.find().sort("category_name", -1)
     return render_template("add_recipe.html", categories=categories)
 

@@ -3,7 +3,7 @@
 
     <h2 class="text-center mt-5">Add your own recipe</h2>
 
-<form class="container" method="POST" action="">
+<form class="container" method="POST" action="{{ url_for ('add_recipe') }}">
   <div class="mb-3">
     <label for="recipe-name" class="form-label">Recipe Name</label>
     <input type="text" class="form-control" id="recipe-name" name="recipe-name">
@@ -24,7 +24,7 @@
 
   <div class="mb-3">
     <label for="time" class="form-label">How long does it take? (in minutes)</label>
-    <input type="text" class="form-control" pattern="^[0-9]$" id="time" name="time" required>
+    <input type="text" class="form-control" pattern="[0-9]+" id="time" name="time" required>
   </div>
 
   <div class="mb-3">
