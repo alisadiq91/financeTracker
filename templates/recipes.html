@@ -20,7 +20,13 @@
         </div>
     </div>
     <h4 class="text-center">This recipe was added by {{ recipe.created_by }}</h4>
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>
+            <button type="button" class="btn btn-danger m-3">Delete Recipe</button>
+        </div>
+    </div>
 {% endfor %}
-</div>
 
+</div>
 {% endblock %}

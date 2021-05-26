@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="text-center mt-5 mb-5">Add your own recipe</h2>
+    <h2 class="text-center mt-5 mb-5">Edit your recipe</h2>
 
-<form class="container" method="POST" action="{{ url_for ('add_recipe') }}">
+<form class="container" method="POST" action="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}">
 <div class="mt-3 mb-3">
   <label for="food_img" class="mb-3">Upload a picture of your cooking</label><br>
   <input type="file" id="food_img" name="food_img" accept="image/*" required>
@@ -71,7 +71,7 @@
         </ul>
 </div>
 
-  <button type="submit" class="btn btn-primary">Add this recipe!</button>
+  <button type="submit" class="btn btn-primary">Submit changes!</button>
 </form>
 
 
