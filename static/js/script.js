@@ -18,7 +18,7 @@ $('.add-method-list-item').click(function (event) {
     let methodItem = `<li class="list-item">
                                 <div class="input-field">
                                     <i class="fas fa-times mr-4 remove-list-item"></i>
-                                    <input name="method1" id="ingredients1" type="text" maxlength="100" placeholder="Add method step..." required>
+                                    <input name="method1" id="method1" class="method-form" type="text" maxlength="100" placeholder="Add method step..." required>
                                 </div>
                           </li>`;      
                             

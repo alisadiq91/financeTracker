@@ -3,7 +3,7 @@
 
     <h2 class="text-center mt-5">Add your own recipe</h2>
 
-    <form class="container">
+<form class="container" method="POST" action="">
   <div class="mb-3">
     <label for="recipe-name" class="form-label">Recipe Name</label>
     <input type="text" class="form-control" id="recipe-name" name="recipe-name">
@@ -12,10 +12,9 @@
       <label for="category_name mt-3" class="form-label">Course</label>
         <select class="form-control" id="category_name" name="category_name" required>
             <option value="" disabled selected>Select course</option>
-            <option value="starters" id="starters" >Starters</option>
-            <option value="sides" id="sides">Sides</option>
-            <option value="mains"id="mains">Mains</option>
-            <option value="desserts" id="desserts">Desserts</option>
+            {% for category in categories %}
+                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+            {% endfor %}
         </select>
     </div>
 <div class="mb-3">
@@ -30,9 +29,9 @@
 
   <div class="mb-3">
   <label for="difficulty" class="form-label mr-3">How difficult is this recipe (On a scale of 1-5)</label>
-  <input class="slider" type="range" list="tickmarks" min="1" max="5" step="1">
+  <input class="slider" name="difficulty" id="difficulty" type="range" list="tickmarks" min="1" max="5" step="1">
 
-<datalist id="dificulty">
+<datalist>
   <option value="1" label="1"></option>
   <option value="2" label="2"></option>
   <option value="3" label="3"></option>
@@ -42,7 +41,7 @@
 </div>
 
 <div class="mb-3">
-    <label for="ingredients" class="form-label">Ingredients</label>
+    <label for="ingredients1" class="form-label">Ingredients</label>
         <ul id="ingredients">
             <li class="list-item">
                     
@@ -54,7 +53,7 @@
 </div>
 
 <div class="mb-3">
-    <label for="method" class="form-label">Method</label>
+    <label for="method1" class="form-label">Method</label>
         <ul id="method">
             <li class="list-item">
                     
@@ -65,7 +64,7 @@
         </ul>
 </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Add this recipe!</button>
 </form>
 
 

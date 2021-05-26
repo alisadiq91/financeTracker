@@ -124,3 +124,7 @@
 .list-item {
     list-style-type: none;
 }
+
+.method-form {
+    width: 90%;
+}
