@@ -1,39 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipe in recipes %}
-        {{ recipe.category_name }}<br>
-        {{ recipe.food_name }}<br>
-        {{ recipe.difficulty }}<br>
-        {{ recipe.time }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.steps }}<br>
-        By {{ recipe.created_by }}<br>
-    {% endfor %}
-
 <div class="container">
-    <h1 class="text-center font-weight-bold mb-5">RECIPES</h1>
-    <div class="row">
-        <div class="col">
-            <div class="row">
-                <div class="col-5"><img src="" alt=""></div>
-                <div class="col-7">
-                    <h3>FOOD NAME</h3>
-                    <h4>COURSE (main etc)</h4>
-                    <h4>DIFFICULTY LEVEL</h4>
-                    <h4>TIME</h4>
-                </div>
-            </div>
+    <h2 class="text-center mt-5 mb-5">Recipes</h2>
+    <div class="row">   
+        {% for recipe in recipes %}
+        <div class="col-5"><img src="{{ recipe.food_img }}" alt="{{ recipe.food_name }} image uploaded by {{ recipe.created_by }}"></div>
+        <div class="col-7">
+            <h3>Food Name : {{ recipe.food_name }}</h3>
+            <h4>Course : {{ recipe.category_name }}</h4>
+            <h4>Difficulty level : {{ recipe.difficulty }} out of 5</h4>
+            <h4>Time : {{ recipe.time }} minutes</h4>
         </div>
     </div>
     <div class="row">
         <div class="col text-center">
-            <h4>INGREDIENTS ACCORDION</h4>
-            <h4>METHOD ACCORDION</h4>
+            <h4>Ingredients needed : {{ recipe.ingredients1 }}</h4>
+            <h4>Method : {{ recipe.method1 }}</h4>
         </div>
     </div>
-    <h4>CREATED BY</h4>
-
+    <h4 class="text-center">This recipe was added by {{ recipe.created_by }}</h4>
+{% endfor %}
 </div>
 
 {% endblock %}

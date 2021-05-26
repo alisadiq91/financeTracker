@@ -90,6 +90,13 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route('check_login')
+def check_login():
+    if session["user"]:
+        return render_template("add_recipe.html")
+    return redirect(url_for("login"))
+
+
 @app.route("/logout")
 def logout():
     flash("You have now logged out")
@@ -102,7 +109,8 @@ def add_recipe():
     if request.method == "POST":
         new_recipe = {
             "category_name": request.form.get("category_name"),
-            "recipe-name": request.form.get("recipe-name"),
+            "food_name": request.form.get("food_name"),
+            "food_img": request.form.get("food_img"),
             "description": request.form.get("description"),
             "time": request.form.get("time"),
             "difficulty": request.form.get("difficulty"),
@@ -116,7 +124,7 @@ def add_recipe():
     categories = mongo.db.categories.find().sort("category_name", -1)
     return render_template("add_recipe.html", categories=categories)
 
-
+        
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
