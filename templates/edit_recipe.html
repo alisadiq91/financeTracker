@@ -13,30 +13,34 @@
 
   <div class="mb-3">
     <label for="food_name" class="form-label">Recipe Name</label>
-    <input type="text" class="form-control" id="food_name" name="food_name" required>
+    <input type="text" value="{{ recipe.food_name }}" class="form-control" id="food_name" name="food_name" required>
   </div>
   <div class="form-group">
       <label for="category_name mt-3" class="form-label">Course</label>
         <select class="form-control" id="category_name" name="category_name" required>
-            <option value="" disabled selected>Select course</option>
+            <option value="" disabled>Select course</option>
             {% for category in categories %}
+                {% if category.category_name == recipe.category_name %}
+                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                {% else %}
                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                {% endif %}
             {% endfor %}
         </select>
     </div>
 <div class="mb-3">
     <label for="description" class="form-label">Please provide a short description of the food</label>
-    <input type="text" class="form-control" minlength="10" maxlength="100" id="description" name="description" required>
+    <input type="text" value="{{ recipe.description }}"class="form-control" minlength="10" maxlength="100" id="description" name="description" required>
   </div>
 
   <div class="mb-3">
     <label for="time" class="form-label">How long does it take? (in minutes)</label>
-    <input type="text" class="form-control" pattern="[0-9]+" id="time" name="time" required>
+    <input type="text" value="{{ recipe.time }}"class="form-control" pattern="[0-9]+" id="time" name="time" required>
   </div>
 
   <div class="mb-3">
   <label for="difficulty" class="form-label mr-3">How difficult is this recipe (On a scale of 1-5)</label>
-  <input class="slider" name="difficulty" id="difficulty" type="range" list="tickmarks" min="1" max="5" step="1" required>
+  <input class="slider" value="{{ recipe.difficulty }}"name="difficulty" id="difficulty" type="range" list="tickmarks" min="1" max="5" step="1" required>
 
 <datalist>
   <option value="1" label="1"></option>
@@ -70,7 +74,7 @@
             </li>
         </ul>
 </div>
-
+<a href="{{ url_for ('get_recipes') }}" class="btn btn-danger">Cancel</a>
   <button type="submit" class="btn btn-primary">Submit changes!</button>
 </form>
 
