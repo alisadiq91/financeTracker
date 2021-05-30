@@ -147,7 +147,48 @@ def delete_recipe(recipe_id):
     flash("Your recipe has now been deleted")
     return redirect(url_for("get_recipes"))
 
-        
+# Admin functions
+
+@app.route("/get_names")
+def get_names():
+    recipes = list(mongo.db.recipes.find())
+    return render_template("manage.html", recipes=recipes)
+
+@app.route("/admin_delete_recipe/<recipe_id>")
+def admin_delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Your recipe has now been deleted")
+    return redirect(url_for("get_names"))
+
+@app.route("/admin_edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def admin_edit_recipe(recipe_id):
+    if request.method == "POST":
+        submit_recipe = {
+            "category_name": request.form.get("category_name"),
+            "food_name": request.form.get("food_name"),
+            "food_img": request.form.get("food_img"),
+            "description": request.form.get("description"),
+            "time": request.form.get("time"),
+            "difficulty": request.form.get("difficulty"),
+            "ingredients1": request.form.getlist("ingredients1"),
+            "method1": request.form.getlist("method1"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit_recipe)
+        flash("Your recipe has been updated!")
+        return redirect(url_for("get_names"))
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", -1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
+
+@app.route("/get_single_recipe/<recipe_id>")
+def get_single_recipe(recipe_id):
+    recipes = list(mongo.db.recipes.find())
+    return render_template("one_recipe.html", recipes=recipes)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
