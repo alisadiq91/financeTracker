@@ -84,6 +84,9 @@
 
 .flash-message {
     text-align: center;
+    color: black;
+    margin-top: 5%;
+
 }
 
 /* The slider itself */
@@ -134,7 +137,14 @@
 }
 
 footer{
-    position: absolute;
+    
     bottom: 0;
     width: 100%;
+}
+
+
+.fa-user, .fa-lock, .fa-utensils, .fa-heart{
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
 }

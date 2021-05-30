@@ -4,7 +4,7 @@
 {% if recipes|length > 0 %}
 <div class="container">
     <h2 class="text-center mt-5 mb-5">Recipes</h2>
-    <div class="row">   
+    <div class="row mb-5">   
         {% for recipe in recipes %}
         <div class="col-5"><img src="{{ recipe.food_img }}" alt="{{ recipe.food_name }} image uploaded by {{ recipe.created_by }}"></div>
         <div class="col-7">
