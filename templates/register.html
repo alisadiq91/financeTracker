@@ -3,7 +3,7 @@
 
 
 <div class="signup-form text-center">
-    <form method="POST" action="{{ url_for('register')}}" oninput='password-confirm.setCustomValidity(password-confirm.value != password.value ? "Passwords do not match." : "")'>
+    <form method="POST" action="{{ url_for('register')}}" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Passwords do not match." : "")'>
 		<h2>Register</h2>
 		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
         <div class="form-group">
@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             <i class="fas fa-lock"></i>
-            <input class="form-control mt-3" id="password-confirm" name="password-confirm" type="password" placeholder="Confirm Password" minlength="7" maxlength="15"
+            <input class="form-control mt-3" id="confirm" name="confirm" type="password" placeholder="Confirm Password" minlength="7" maxlength="15"
                 pattern="^[a-zA-Z0-9]{7,15}$" required>
         </div>
         <div class="form-group">
