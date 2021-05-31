@@ -195,6 +195,10 @@ def get_single_recipe(recipe_id):
     return render_template("one_recipe.html", recipes=recipes)
 
 
+@app.route("/forgot_pass")
+def forgot_pass():
+    return "Forgot Password"
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,12 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container d-flex justify-content-center text-background mt-5">
-    <form action="{{ url_for ('search') }}" method="POST" class="recipe-search form-inline">
-        <input class="form-control mr-sm-2" type="text" name="query" id="query" minlength="3" placeholder="Search for a recipe..." aria-label="Search">
-        <button class="other-text btn btn-warning my-sm-0" type="submit">Search</button>
-    </form>
+<div class="container d-flex justify-content-center text-background mt-5 py-2">
+    <form action="{{ url_for ('search') }}" method="POST" class="recipe-search">
+        <input class="form-control mr-sm-2 mb-3" type="text" name="query" id="query" minlength="3" placeholder="Search for a recipe..." aria-label="Search">
+    <div class="collapse text-background py-3" id="collapseExample">
+        <div class="card card-body">
+            <label for="category_name my-3" class="other-text black-text form-label"> <i class="fas fa-utensils"></i> Course</label>
+                <select class="form-control" id="category_name" name="category_name">
+                        <option value="" disabled selected>Select course</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+            <label for="rating-search" class="my-3 other-text black-text"><i class="fas fa-star-half-alt"></i> Max difficulty Rating</label>
+                <select class="form-control" id="rating-search" name="rating-search">
+                    <option value="" disabled selected>All</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+        </div>
+    </div>
+    <button class="other-text btn btn-warning my-sm-0" type="submit">Search</button>
+            <a class="other-text btn btn-warning ml-sm-2 my-sm-0" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Filter
+            </a>
+            <a href="{{ url_for('get_recipes') }}" class="other-text ml-sm-2 btn btn-warning my-sm-0" type="submit">Reset</a>
+    </form> 
 </div>
+
 {% if recipes|length > 0 %}
 <div class="container text-background">
     <h2 class="titles text-center mt-5 py-5">Recipes</h2>
@@ -19,6 +43,7 @@
                 <div class="col-6 other-text">
                     <h3>Food Name : {{ recipe.food_name.capitalize() }}</h3>
                     <h4>Course : {{ recipe.category_name }}</h4>
+                    <h4>Description : {{ recipe.description }}</h4>
                     <h4>Difficulty level : {{ recipe.difficulty }} out of 5</h4>
                     <h4>Time : {{ recipe.time }} minutes</h4>
                 </div>
@@ -35,7 +60,7 @@
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>
-                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-danger m-3">Delete Recipe</a>
+                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-3">Delete Recipe</a>
                 </div>
             </div>
         </div>

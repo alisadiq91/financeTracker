@@ -168,6 +168,11 @@ footer{
     color:white;
 }
 
+.black-text {
+    color: black !important;
+    font-size: 20px;
+}
+
 .nav-user{
     color: white !important;
     font-size: normal !important;

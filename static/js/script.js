@@ -30,3 +30,22 @@ $('#method').on("click", ".remove-list-item", function (event) {
     $(this).parent().remove();
 });
 
+$(function(){
+    $(".logout-confirm").click(function(){
+        if(confirm('Are you sure you want to logout?')) {
+            return true;
+        }
+
+        return false;
+    });
+});
+
+$(function(){
+    $('.delete-confirm').click(function(){
+        if(confirm('Are you sure you want to delete this recipe?')) {
+            return true;
+        }
+
+        return false;
+    });
+});

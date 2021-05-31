@@ -12,6 +12,7 @@
 		<div class="form-group">
             <i class="fas fa-lock"></i>
             <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" pattern="^[a-zA-Z0-9]{7,15}$" minlength="7" maxlength="15" required>
+            <span class="help-block" id="passwordHelpBlock"><a href="{{ url_for('forgot_pass')}}">Forgot Password?</a></span>
         </div>
 		<div class="form-group">
             <button type="submit" class="other-text btn btn-success btn-lg btn-block">Login</button>
