@@ -2,10 +2,11 @@
 {% block content %}
 
 <div class="container text-background mt-5 py-5 text-center">
-<h3 class ="mt-5 titles">{{ username }}'s profile</h3>
-<h2 class ="mt-5 other-text">Cooking Level : {{ chef_level }}</h2>
-<h2 class ="my-5 other-text"> Favourite Food : {{ favourite }}</h2>
+    <h2 class ="mt-5 titles">{{ username.username.capitalize() }}'s profile</h2>
+    <h2 class ="mt-5 other-text">Cooking Level : {{ username.chef_level }}</h2>
+    <h2 class ="my-5 other-text"> Favourite Food : {{ username.favourite }}</h2>
 </div>
+
 <div class="container text-background">
     <h2 class="titles text-center mt-5 py-5">Your Recipes</h2>
         {% for recipe in recipes %}
