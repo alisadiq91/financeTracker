@@ -1,34 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% if recipes|length > 0 %}
 <div class="container text-background">
-    <h2 class="text-center mt-5 mb-5">Recipes</h2>
-    <div class="row">   
+    <h2 class="titles text-center mt-5 py-5">Recipes</h2>
         {% for recipe in recipes %}
-        <div class="col-5"><img src="{{ recipe.food_img }}" alt="{{ recipe.food_name }} image uploaded by {{ recipe.created_by }}"></div>
-        <div class="col-7">
-            <h3>Food Name : {{ recipe.food_name.capitalize() }}</h3>
-            <h4>Course : {{ recipe.category_name }}</h4>
-            <h4>Difficulty level : {{ recipe.difficulty }} out of 5</h4>
-            <h4>Time : {{ recipe.time }} minutes</h4>
+        <div class="mb-5 border border-dark rounded">
+            <div class="row mb-5">   
+                <div class="col-6">
+                    <img class="food-image" src="{{ recipe.food_img }}" alt="{{ recipe.food_name }} image uploaded by {{ recipe.created_by }}">
+                </div>
+                <div class="col-6 other-text">
+                    <h3>Food Name : {{ recipe.food_name.capitalize() }}</h3>
+                    <h4>Course : {{ recipe.category_name }}</h4>
+                    <h4>Difficulty level : {{ recipe.difficulty }} out of 5</h4>
+                    <h4>Time : {{ recipe.time }} minutes</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col other-text text-left">
+                    <h4>Ingredients needed : {{ recipe.ingredients1 }}</h4>
+                    <h4>Method : {{ recipe.method1 }}</h4>
+                </div>
+            </div>
+        
+            <h4 class="mt-3 text-center other-text">This recipe was added by {{ recipe.created_by }}</h4>
+            {% if session.user|lower == recipe.created_by|lower or "admin"|lower %}
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>
+                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-danger m-3">Delete Recipe</a>
+                </div>
+            </div>
+        </div>
+            {% endif %}
+        {% endfor %}
+{% else %}
+    <div class="container text-background py-5 mt-5 no-recipe">
+        <h2 class="text-center">No Recipes found!</h2>
+        <div class="d-flex justify-content-center">
+        <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See all recipes here!</a>
         </div>
     </div>
-    <div class="row">
-        <div class="col text-center">
-            <h4>Ingredients needed : {{ recipe.ingredients1 }}</h4>
-            <h4>Method : {{ recipe.method1 }}</h4>
-        </div>
-    </div>
-    <h4 class="text-center">This recipe was added by {{ recipe.created_by }}</h4>
-    {% if session.user|lower == recipe.created_by|lower %}
-    <div class="row">
-        <div class="col d-flex justify-content-center">
-            <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>
-             <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-danger m-3">Delete Recipe</a>
-        </div>
-    </div>
-    {% endif %}
-{% endfor %}
+{% endif %}
 
 </div>
 {% endblock %}

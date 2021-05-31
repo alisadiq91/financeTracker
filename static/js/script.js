@@ -29,3 +29,4 @@ $('.add-method-list-item').click(function (event) {
 $('#method').on("click", ".remove-list-item", function (event) {
     $(this).parent().remove();
 });
+
