@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container d-flex justify-content-center">
+<div class="text-background container d-flex justify-content-center my-5">
     <div class="row">
         <div class="col-12 text-center mt-5">
-            <h1 class="mt-5">Welcome to our Middle Eastern Cookbook!</h1>
-            <h3 class="mt-5">For you!</h3>
-            <h3 class="mt-5">Made by you!</h3>
-            <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See some recipes!</a>
-            <a href="" class="btn btn-success mt-5">Add your own recipe!</a>
+            <h1 class=" titles">Welcome to our Middle Eastern Cookbook!</h1>
+            <h3 class="mt-5 titles">For you!</h3>
+            <h3 class="mt-5 titles">Made by you!</h3>
+            <a href="{{ url_for ('get_recipes') }}" class="other-text btn btn-success my-5"><i class="fas fa-book"></i> See some recipes!</a>
+            {% if session.user %}
+            <a href="{{ url_for ('add_recipe') }}" class="other-text btn btn-success my-5"><i class="fas fa-plus"></i> Add your own recipe!</a>
+            {% else %}
+            <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
+            {% endif %}
         </div>
     </div>
 </div>

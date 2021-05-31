@@ -4,7 +4,7 @@
 
 <div class="signup-form text-center">
     <form method="POST" action="{{ url_for('register')}}" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Passwords do not match." : "")'>
-		<h2>Register</h2>
+		<h2 class="titles">Register</h2>
 		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
         <div class="form-group">
             <i class="fas fa-user"></i>
@@ -38,7 +38,7 @@
         </div>
 
 		<div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+            <button type="submit" class="other-text btn btn-success btn-lg btn-block">Register Now</button>
         </div>
     </form>
 	<div>Already have an account? <a href="{{ url_for('login')}}">Sign in</a></div>

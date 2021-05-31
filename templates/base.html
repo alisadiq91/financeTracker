@@ -10,53 +10,56 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!---css link-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <!---google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crushed&family=Uncial+Antiqua&display=swap" rel="stylesheet">
     {% block styles %}
     {% endblock %}
     <title>Middle Eastern Cookbook</title>
 </head>
 <body>
     <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="{{ url_for ('go_home') }}">Eat Middle East!</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand titles" href="{{ url_for ('go_home') }}">Eat Middle East!</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ url_for ('go_home') }}">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for ('go_home') }}"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ url_for ('get_recipes') }}">Recipes</a>
+        <a class="nav-link" href="{{ url_for ('get_recipes') }}"><i class="fas fa-book-open"></i> Recipes</a>
       </li>
       {% if session.user %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('profile', username=session['user']) }}">Profile</a>
+                <a class="nav-link" href="{{ url_for ('profile', username=session['user']) }}"><i class="fas fa-user nav-user"></i> Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('add_recipe') }}">Add Recipe</a>
+                <a class="nav-link" href="{{ url_for ('add_recipe') }}"><i class="fas fa-plus"></i> Add Recipe</a>
             </li>
             {% if session.user|lower == "admin"|lower %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('get_names') }}">Manage Recipes</a>
+                <a class="nav-link" href="{{ url_for ('get_names') }}"><i class="fas fa-tasks"></i> Manage Recipes</a>
             </li>
             {% endif %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('logout') }}">Logout</a>
+                <a class="nav-link" href="{{ url_for ('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
       {% else %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('login') }}">Login</a>
+                <a class="nav-link" href="{{ url_for ('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for ('register') }}">Register</a>
+                <a class="nav-link" href="{{ url_for ('register') }}"><i class="fas fa-user-plus"></i> Register</a>
             </li>
       {% endif %}
     </ul>
     <form action="{{ url_for ('search') }}" method="POST" class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" name="query" id="query" minlength="3" placeholder="Search for a recipe..." aria-label="Search">
-      <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+      <button class="other-text btn btn-warning my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
@@ -104,7 +107,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3 font-italic font-weight-light" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright Ali Sadiq
+    © 2021 Copyright Eat Middle East!
   </div>
   <!-- Copyright -->
 </footer>

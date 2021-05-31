@@ -86,7 +86,8 @@
     text-align: center;
     color: black;
     margin-top: 5%;
-
+    background-color: red;
+    font-family: 'crushed', sans-serif;
 }
 
 /* The slider itself */
@@ -147,4 +148,36 @@ footer{
     color: black;
     font-size: 20px;
     margin-top: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    letter-spacing: 3px;
+    font-size: large;
+    font-family: 'crushed', sans-serif;
+}
+
+.titles {
+    font-family: 'Uncial Antiqua', sans-serif;
+    color: whitesmoke;
+}
+
+.other-text {
+    font-family: 'crushed', sans-serif;
+    letter-spacing: 3px;
+    color:white;
+}
+
+.nav-user{
+    color: white !important;
+    font-size: normal !important;
+    margin: 0 !important;
+}
+
+body{
+    background-image: url("https://mk0kaleelao979sb1ktf.kinstacdn.com/wp-content/uploads/2019/08/shutterstock_1690553083-1536x1025.jpg");
+}
+
+.text-background {
+    background-color: rgb(128, 128, 128, 0.9);
 }
