@@ -84,9 +84,9 @@
 
 .flash-message {
     text-align: center;
-    color: black;
+    color: white;
     margin-top: 5%;
-    background-color: red;
+    background-color: rgb(128, 128, 128, 0.9);
     font-family: 'crushed', sans-serif;
 }
 
@@ -236,5 +236,9 @@ body{
 
 .course-form{
     color: white !important;
+}
+
+.white-text {
+    color: white;
 }
 
