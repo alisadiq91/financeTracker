@@ -47,10 +47,11 @@ def pagination_args(recipes):
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
+    ingredients1 = list(mongo.db.recipes.ingredients1.find())
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
     return render_template("recipes.html",
-                        recipes=recipes_paginated, pagination=pagination)
+                        recipes=recipes_paginated, ingredients1=ingredients1, pagination=pagination)
 
 
 # Search box on navbar and recipe page
