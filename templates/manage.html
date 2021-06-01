@@ -10,8 +10,8 @@
         <a class="btn btn-primary mb-4 d-flex justify-content-center add-button other-text" href="{{ url_for ('add_recipe') }}">Add Recipe</a>
         </div>
     </div>
-    <div class="container">
-    <div class="row">
+    
+        <div class="row">
         {% for recipe in recipes %}
         
             <div class="card col-lg-3 col-sm-12 text-center" style="width: 18rem;">
@@ -21,10 +21,11 @@
                     <a href="{{ url_for ('admin_edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-1">Edit</a>
                     <a href="{{ url_for ('admin_delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-1">Delete</a>
                 </div>
-            </div>
-        </div>    
+            </div> 
         {% endfor %}
-    </div>
+        </div>    
+       
+    
 </div>
 
 {% endblock %}

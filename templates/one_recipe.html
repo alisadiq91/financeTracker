@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% if recipes|length > 0 %}
 <div class="container text-background">
-    <h2 class="titles text-center mt-5 py-5">Recipes</h2>
+    <h2 class="titles text-center mt-5 py-5">Recipe</h2>
         {% for recipe in recipes %}
         <div class="mb-5 border border-dark rounded">
             <div class="row mb-5">   
@@ -25,24 +24,16 @@
             </div>
         
             <h4 class="mt-3 text-center other-text">This recipe was added by {{ recipe.created_by }}</h4>
-            {% if session.user|lower == recipe.created_by|lower or "admin"|lower %}
+            {% if session.user|lower == "admin"|lower or session.user|lower == recipe.created_by|lower %}
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>
-                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="btn btn-danger m-3">Delete Recipe</a>
+                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-3">Delete Recipe</a>
                 </div>
             </div>
         </div>
             {% endif %}
         {% endfor %}
-{% else %}
-    <div class="container text-background py-5 mt-5 no-recipe">
-        <h2 class="text-center">No Recipes found!</h2>
-        <div class="d-flex justify-content-center">
-        <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See all recipes here!</a>
-        </div>
-    </div>
-{% endif %}
 
 </div>
 {% endblock %}

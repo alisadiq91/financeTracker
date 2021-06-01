@@ -75,6 +75,16 @@ def get_recipes_by_category(category_name):
                     pagination=pagination, category_name=category_name)
 
 
+# filter function for difficulty level
+@app.route("/recipes/<difficulty>")
+def get_recipes_by_difficulty(difficulty):
+    recipes = list(mongo.db.recipes.find({"difficulty": difficulty}))
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("recipes_filter.html", recipes=recipes_paginated,
+                    pagination=pagination, difficulty=difficulty)
+
+
 # register functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -90,7 +100,7 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
             "favourite": request.form.get("favourite").lower(),
-            "chef-level": request.form.get("chef-level").lower()
+            "chef_level": request.form.get("chef_level").lower()
         }
         mongo.db.users.insert_one(register)
         
@@ -134,7 +144,8 @@ def profile(username):
     # grab the session user's username
     username = mongo.db.users.find_one(
         {"username": username})
-    return render_template("profile.html", username=username)
+    recipes = list(mongo.db.recipes.find())
+    return render_template("profile.html", recipes=recipes, username=username)
 
     if session["user"]:
         return render_template("profile.html", user=username)
@@ -244,8 +255,9 @@ def admin_edit_recipe(recipe_id):
 # function for admin to click recipe name to show full details
 @app.route("/get_single_recipe/<recipe_id>")
 def get_single_recipe(recipe_id):
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
     return render_template("one_recipe.html", recipes=recipes)
+
 
 # forgot password function
 @app.route("/forgot_pass")
