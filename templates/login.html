@@ -3,22 +3,28 @@
 
 <div class="container">
     <div class="row">
+<!--form to log in -->
         <div class="signup-form text-center">
             <form method="POST" action="{{ url_for('login')}}">
                 <h2 class="titles">Login</h2>
                 <div class="form-group">
                     <i class="fas fa-user"></i>
+<!--username field -->
                     <input type="text" class="form-control mt-3" name="username" id="username" placeholder="Username" pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" required>
                 </div>
                 <div class="form-group">
                     <i class="fas fa-lock"></i>
+<!--password field -->
                     <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" pattern="^[a-zA-Z0-9]{7,15}$" minlength="7" maxlength="15" required>
+<!--forgot password function -->
                     <span class="help-block" id="passwordHelpBlock"><a href="{{ url_for('forgot_pass')}}">Forgot Password?</a></span>
                 </div>
                 <div class="form-group">
+<!--submit button -->
                     <button type="submit" class="other-text btn btn-success btn-lg btn-block">Login</button>
                 </div>
             </form>
+<!--link to register if not signed up -->
             <div class="text-background white-text">Don't have an account? <a href="{{ url_for('register')}}">Register here!</a></div>
         </div>
     </div>

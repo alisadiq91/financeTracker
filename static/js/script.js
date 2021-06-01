@@ -1,3 +1,4 @@
+// Add ingredient list item on click
 $('.add-ingredient-list-item').click(function (event) {
     let ingredientItem = `<li class="list-item">
                                 <div class="input-field">
@@ -14,6 +15,7 @@ $('#ingredients').on("click", ".remove-list-item", function (event) {
     $(this).parent().remove();
 });
 
+// Add method step item on click
 $('.add-method-list-item').click(function (event) {
     let methodItem = `<li class="list-item">
                                 <div class="input-field">
@@ -25,11 +27,12 @@ $('.add-method-list-item').click(function (event) {
     $(this).parent().before(methodItem);
 });
 
-// Remove ingredient list item on click
+// Remove method step item on click
 $('#method').on("click", ".remove-list-item", function (event) {
     $(this).parent().remove();
 });
 
+// Function to confirm user wants to logout
 $(function(){
     $(".logout-confirm").click(function(){
         if(confirm('Are you sure you want to logout?')) {
@@ -40,6 +43,7 @@ $(function(){
     });
 });
 
+// Function to confirm user wants to delete recipe
 $(function(){
     $('.delete-confirm').click(function(){
         if(confirm('Are you sure you want to delete this recipe?')) {
@@ -48,10 +52,4 @@ $(function(){
 
         return false;
     });
-});
-
-// With JQuery
-$("#difficulty").slider();
-$("#difficulty").on("slide", function(slideEvt) {
-	$("#sliderValue").text(slideEvt.value);
 });

@@ -67,7 +67,7 @@ def search():
 
 
 # filter function to show each course
-@app.route("/recipes/<category_name>")
+@app.route("/recipes_by_category/<category_name>")
 def get_recipes_by_category(category_name):
     recipes = list(mongo.db.recipes.find({"category_name": category_name}))
     recipes_paginated = paginated(recipes)
@@ -77,7 +77,7 @@ def get_recipes_by_category(category_name):
 
 
 # filter function for difficulty level
-@app.route("/recipes/<difficulty>")
+@app.route("/recipes_by_difficulty/<difficulty>")
 def get_recipes_by_difficulty(difficulty):
     recipes = list(mongo.db.recipes.find({"difficulty": difficulty}))
     recipes_paginated = paginated(recipes)

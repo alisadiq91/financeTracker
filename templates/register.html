@@ -3,27 +3,32 @@
 
 <div class="container">
     <div class="row">
+<!--form to register-->
         <div class="signup-form text-center">
             <form method="POST" action="{{ url_for('register')}}" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Passwords do not match." : "")'>
                 <h2 class="titles">Register</h2>
                 <p class="hint-text">Create your account. It's free and only takes a minute.</p>
                 <div class="form-group">
                     <i class="fas fa-user"></i>
+<!--username the user wants with information below for which format is needed -->
                     <input type="text" class="form-control mt-3" name="username" id="username" placeholder="Username" pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" required>
                     <small class="form-text text-muted">Must be between 5-15 characters. No special characters allowed eg. ! ?</small>	  	
                 </div>
                 <div class="form-group">
                     <i class="fas fa-lock"></i>
+<!--password the user wants with information below for which format is needed -->
                     <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" pattern="^[a-zA-Z0-9]{7,15}$" minlength="7" maxlength="15" required>
                     <small class="form-text text-muted">Must be between 7-15 characters. No special characters allowed eg. ! ?</small>
                 </div>
                 <div class="form-group">
                     <i class="fas fa-lock"></i>
+<!--confirm password field to check user has entered correctly twice -->
                     <input class="form-control mt-3" id="confirm" name="confirm" type="password" placeholder="Confirm Password" minlength="7" maxlength="15"
                         pattern="^[a-zA-Z0-9]{7,15}$" required>
                 </div>
                 <div class="form-group">
                     <i class="fas fa-utensils"></i>
+<!--fields to gain more information about the users cooking skills and favourite food -->
                             <select class="form-control mt-3" id="chef_level" name="chef_level" required>
                                 <option value="" disabled selected>Select your cooking level, be honest!</option>
                                 <option value="beginner" id="beginner" >Beginner</option>
@@ -39,9 +44,11 @@
                 </div>
 
                 <div class="form-group">
+<!--button to submit form to register -->
                     <button type="submit" class="other-text btn btn-success btn-lg btn-block">Register Now</button>
                 </div>
             </form>
+<!--link to login if user already has an account -->
             <div class="text-background white-text">Already have an account? <a href="{{ url_for('login')}}">Sign in</a></div>
         </div>
     </div>

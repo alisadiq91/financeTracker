@@ -2,22 +2,24 @@
 {% block content %}
 
 
-
+<!--manage page for admin users only -->
 <div class="container text-background mt-5 py-5">
     <h2 class="text-center mb-5 titles">Manage Recipes</h2>
     <div class="row">
         <div class="col-12">
+<!--link to add a recipe -->
         <a class="btn btn-primary mb-4 d-flex justify-content-center add-button other-text" href="{{ url_for ('add_recipe') }}">Add Recipe</a>
         </div>
     </div>
     
         <div class="row">
         {% for recipe in recipes %}
-        
+<!--cards showing all recipes -->        
             <div class="card col-lg-3 col-sm-12 text-center" style="width: 18rem;">
                 <div class="card-body other-text">
                     <h5 class="card-title"><a href="{{ url_for ('get_single_recipe', recipe_id=recipe._id) }}" class="btn btn-info m-1">{{ recipe.food_name.capitalize() }}</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Added by {{ recipe.created_by }}</h6>
+<!--edit and delete buttons for each recipe -->
                     <a href="{{ url_for ('admin_edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-1">Edit</a>
                     <a href="{{ url_for ('admin_delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-1">Delete</a>
                 </div>
