@@ -77,7 +77,7 @@ def login():
             return redirect(url_for("login"))
     return render_template("login.html")
 
-@app.route("/")
+
 @app.route("/go_home")
 def go_home():
     return render_template("home.html")
@@ -94,13 +94,7 @@ def profile(username):
         return render_template("profile.html", user=username)
     
     return redirect(url_for("login"))
-
-
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def get_user_recipe():
-    recipes = list(mongo.db.recipes.find())
-    return render_template("profile.html", recipes=recipes)
-
+    
 
 @app.route("/logout")
 def logout():

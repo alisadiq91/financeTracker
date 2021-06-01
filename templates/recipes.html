@@ -72,11 +72,12 @@
     <div class="container text-background py-5 mt-5 no-recipe">
         <h2 class="text-center">No Recipes found!</h2>
         <div class="d-flex justify-content-center">
-        <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See all recipes here!</a>
+            <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See all recipes here!</a>
         </div>
-    </div>
+{% endif %} 
+   </div>
 </div>
-{% endif %}
+
 
 
 {% endblock %}
