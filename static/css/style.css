@@ -251,3 +251,25 @@ body{
     width: 60%;
 }
 
+.pagination ul {
+    padding: 0;
+    margin: 5px;
+}
+
+.pagination li {
+    margin-left: 6px;
+    margin-right: 6px;
+    color: white;
+    list-style: none;
+    display:inline-block;
+}
+
+.pagination li a{
+    color: white;
+}
+
+.pagination li.active {
+ border-bottom: 1px solid white;
+}
+
+

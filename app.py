@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -17,11 +18,38 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# Pagination item limit
+PER_PAGE = 1
+
+
+# Pagination
+# used code from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+def paginated(recipes):
+    """ Sets Pagination for long content pages """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    """ Sets Pagination for long content pages """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("recipes.html", recipes=recipes_paginated, pagination=pagination)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -94,7 +122,7 @@ def profile(username):
         return render_template("profile.html", user=username)
     
     return redirect(url_for("login"))
-    
+
 
 @app.route("/logout")
 def logout():
