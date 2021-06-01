@@ -19,7 +19,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 # Pagination item limit
-PER_PAGE = 1
+PER_PAGE = 3
 
 
 # Pagination
@@ -35,7 +35,6 @@ def paginated(recipes):
 
 
 def pagination_args(recipes):
-    """ Sets Pagination for long content pages """
     page, per_page, offset = get_page_args(
                             page_parameter='page',
                             per_page_parameter='per_page')
