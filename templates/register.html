@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row">
-<!--form to register-->
+<!--bootstrap form to register from https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-registration-form-->
         <div class="signup-form text-center">
             <form method="POST" action="{{ url_for('register')}}" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Passwords do not match." : "")'>
                 <h2 class="titles">Register</h2>

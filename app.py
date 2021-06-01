@@ -42,8 +42,14 @@ def pagination_args(recipes):
 
     return Pagination(page=page, per_page=PER_PAGE, total=total)
 
-# Recipe page showing all recipes
+
 @app.route("/")
+# link to homepage
+@app.route("/go_home")
+def go_home():
+    return render_template("home.html")
+
+# Recipe page showing all recipes    
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -134,10 +140,6 @@ def login():
             return redirect(url_for("login"))
     return render_template("login.html")
 
-# link to homepage
-@app.route("/go_home")
-def go_home():
-    return render_template("home.html")
 
 # profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])

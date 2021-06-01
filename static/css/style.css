@@ -1,49 +1,49 @@
-.list-item {
-    list-style-type: none;
+/* general css used across most pages */
+
+body{
+    background-image: url("https://mk0kaleelao979sb1ktf.kinstacdn.com/wp-content/uploads/2019/08/shutterstock_1690553083-1536x1025.jpg");
 }
 
-.method-form {
-    width: 90%;
-}
-
-.add-button {
-    width: 100%;
+/* background for all text containers */
+.text-background {
+    background-color: rgb(128, 128, 128, 0.9);
 }
 
 footer{
-    
     bottom: 0;
     width: 100%;
 }
 
-
-.fa-user, .fa-lock, .fa-utensils, .fa-heart{
-    color: black;
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: white;
-    letter-spacing: 3px;
-    font-size: large;
-    font-family: 'crushed', sans-serif;
-}
-
+/* font styling for all titles */
 .titles {
     font-family: 'Uncial Antiqua', sans-serif;
     color: whitesmoke;
 }
 
+/* font styling for all text that is not a title */
 .other-text {
     font-family: 'crushed', sans-serif;
     letter-spacing: 3px;
     color:white;
 }
 
+/* text that needs to be black */
 .black-text {
     color: black !important;
     font-size: 20px;
+}
+
+/* text that needs to be white */
+.white-text {
+    color: white;
+}
+
+/* navbar styling */
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    letter-spacing: 3px;
+    font-size: large;
+    font-family: 'crushed', sans-serif;
 }
 
 .nav-user{
@@ -52,111 +52,16 @@ footer{
     margin: 0 !important;
 }
 
-body{
-    background-image: url("https://mk0kaleelao979sb1ktf.kinstacdn.com/wp-content/uploads/2019/08/shutterstock_1690553083-1536x1025.jpg");
+/* font awesome icons for login/register */
+.fa-user, .fa-lock, .fa-utensils, .fa-heart{
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-.text-background {
-    background-color: rgb(128, 128, 128, 0.9);
-}
+/* register form styling from bootstrap
+https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-registration-form */ 
 
-.food-image {
-    width: 100%;
-    height: 100%;
-}
-
-/* Tool tip for image address input 
-https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
- 
-[data-tip] {
-	position:relative;
-
-}
-[data-tip]:before {
-	content:'';
-	/* hides the tooltip when not hovered */
-	display:none;
-	content:'';
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-bottom: 5px solid #1a1a1a;	
-	position:absolute;
-	top:30px;
-	left:35px;
-	z-index:8;
-	font-size:0;
-	line-height:0;
-	width:0;
-	height:0;
-}
-[data-tip]:after {
-	display:none;
-	content:attr(data-tip);
-	position:absolute;
-	top:35px;
-	left:0px;
-	padding:5px 8px;
-	background:#1a1a1a;
-	color:#fff;
-	z-index:9;
-	font-size: 0.75em;
-	height:25px;
-	line-height:18px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	white-space:nowrap;
-	word-wrap:normal;
-}
-[data-tip]:hover:before,
-[data-tip]:hover:after {
-	display:block;
-}
-
-.course-form{
-    color: white !important;
-}
-
-.white-text {
-    color: white;
-}
-
-.recipe-search{
-    width: 60%;
-}
-
-.pagination ul {
-    padding: 0;
-    margin: 5px;
-}
-
-.pagination li {
-    margin-left: 6px;
-    margin-right: 6px;
-    color: white;
-    list-style: none;
-    display:inline-block;
-}
-
-.pagination li a{
-    color: white;
-}
-
-.pagination li.active {
- border-bottom: 1px solid white;
-}
-
-.form-control {
-	height: 40px;
-	box-shadow: none;
-	color: #969fa4;
-}
-.form-control:focus {
-	border-color: #5cb85c;
-}
-.form-control, .btn {        
-	border-radius: 3px;
-}
 .signup-form {
 	width: 450px;
 	margin: 0 auto;
@@ -230,6 +135,78 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
 	text-decoration: underline;
 }  
 
+.form-control {
+	height: 40px;
+	box-shadow: none;
+	color: #969fa4;
+}
+.form-control:focus {
+	border-color: #5cb85c;
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+
+/* add/edit recipe forms */
+/* styling for ingredients in add/edit recipe forms */
+.list-item {
+    list-style-type: none;
+}
+
+/* Tool tip for image address input 
+https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
+ 
+[data-tip] {
+	position:relative;
+
+}
+[data-tip]:before {
+	content:'';
+	/* hides the tooltip when not hovered */
+	display:none;
+	content:'';
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #1a1a1a;	
+	position:absolute;
+	top:30px;
+	left:35px;
+	z-index:8;
+	font-size:0;
+	line-height:0;
+	width:0;
+	height:0;
+}
+[data-tip]:after {
+	display:none;
+	content:attr(data-tip);
+	position:absolute;
+	top:35px;
+	left:0px;
+	padding:5px 8px;
+	background:#1a1a1a;
+	color:#fff;
+	z-index:9;
+	font-size: 0.75em;
+	height:25px;
+	line-height:18px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	white-space:nowrap;
+	word-wrap:normal;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+	display:block;
+}
+
+/* font-awesome icon for course selection */
+.course-form{
+    color: white !important;
+}
+
+/* The slider itself */
 .flash-message {
     text-align: center;
     color: white;
@@ -238,7 +215,7 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
     font-family: 'crushed', sans-serif;
 }
 
-/* The slider itself */
+/* bootstrap slider */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
@@ -273,4 +250,47 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
   cursor: pointer; /* Cursor on hover */
 }
 
+/* add/edit recipe form method section width */
+.method-form {
+    width: 90%;
+}
+
+/* add recipe button on various pages */
+.add-button {
+    width: 100%;
+}
+
+/* styling for food image on pages that show recipes */
+.food-image {
+    width: 100%;
+    height: 100%;
+}
+
+/* search bar on all pages showing recipes */ 
+.recipe-search{
+    width: 60%;
+}
+
+/* pagination links */ 
+
+.pagination ul {
+    padding: 0;
+    margin: 5px;
+}
+
+.pagination li {
+    margin-left: 6px;
+    margin-right: 6px;
+    color: white;
+    list-style: none;
+    display:inline-block;
+}
+
+.pagination li a{
+    color: white;
+}
+
+.pagination li.active {
+ border-bottom: 1px solid white;
+}
 
