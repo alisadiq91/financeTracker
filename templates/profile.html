@@ -31,7 +31,7 @@
             </div>
         
             <h4 class="mt-3 text-center other-text">This recipe was added by {{ recipe.created_by }}</h4>
-            {% if session.user|lower == recipe.created_by|lower or "admin"|lower %}
+            {% if session.user|lower == recipe.created_by|lower %}
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>

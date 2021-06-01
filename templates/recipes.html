@@ -39,10 +39,10 @@
         {% for recipe in recipes %}
         <div class="mb-5 border border-dark rounded">
             <div class="row mb-5">   
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12">
                     <img class="food-image" src="{{ recipe.food_img }}" alt="{{ recipe.food_name }} image uploaded by {{ recipe.created_by }}">
                 </div>
-                <div class="col-6 other-text">
+                <div class="col-lg-6 col-sm-12 other-text">
                     <h3>Food Name : {{ recipe.food_name.capitalize() }}</h3>
                     <h4>Course : {{ recipe.category_name }}</h4>
                     <h4>Description : {{ recipe.description }}</h4>
@@ -58,7 +58,7 @@
             </div>
         
             <h4 class="mt-3 text-center other-text">This recipe was added by {{ recipe.created_by }}</h4>
-            {% if session.user|lower == recipe.created_by|lower or "admin"|lower %}
+            {% if session.user|lower == recipe.created_by|lower %}
             <div class="row">
                 <div class="col d-flex justify-content-center">
                     <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-3">Edit Recipe</a>
@@ -75,7 +75,8 @@
         <a href="{{ url_for ('get_recipes') }}" class="btn btn-success mt-5">See all recipes here!</a>
         </div>
     </div>
+</div>
 {% endif %}
 
-</div>
+
 {% endblock %}
