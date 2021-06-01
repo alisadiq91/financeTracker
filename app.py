@@ -18,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-# Pagination item limit
+# Pagination item limit per page
 PER_PAGE = 3
 
 
@@ -42,29 +42,46 @@ def pagination_args(recipes):
 
     return Pagination(page=page, per_page=PER_PAGE, total=total)
 
+# Recipe page showing all recipes
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
-    return render_template("recipes.html", recipes=recipes_paginated, pagination=pagination)
+    return render_template("recipes.html",
+                        recipes=recipes_paginated, pagination=pagination)
 
 
+# Search box on navbar and recipe page
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
-    return render_template("recipes.html", recipes=recipes_paginated, pagination=pagination)
+    categories = mongo.db.categories.find().sort("category_name", -1)
+    return render_template("recipes.html", recipes=recipes_paginated,
+                    pagination=pagination, categories=categories)
 
+
+# filter function to show each course
+@app.route("/recipes/<category_name>")
+def get_recipes_by_category(category_name):
+    recipes = list(mongo.db.recipes.find({"category_name": category_name}))
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("recipes_filter.html", recipes=recipes_paginated,
+                    pagination=pagination, category_name=category_name)
+
+
+# register functionality
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        # check if username already exists
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
@@ -89,7 +106,7 @@ def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        # password check
         if existing_user:
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
@@ -106,34 +123,35 @@ def login():
             return redirect(url_for("login"))
     return render_template("login.html")
 
-
+# link to homepage
 @app.route("/go_home")
 def go_home():
     return render_template("home.html")
 
-
+# profile page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
+    # grab the session user's username
     username = mongo.db.users.find_one(
         {"username": username})
     return render_template("profile.html", username=username)
 
     if session["user"]:
         return render_template("profile.html", user=username)
-    
+    # redirect to login page if not logged in
     return redirect(url_for("login"))
 
-
+# logout function
 @app.route("/logout")
 def logout():
     flash("You have now logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
-
+# add recipe function
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    # retrieve data from form
     if request.method == "POST":
         new_recipe = {
             "category_name": request.form.get("category_name"),
@@ -153,6 +171,7 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# edit recipe function
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -176,6 +195,7 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# delete recipe function
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -184,17 +204,20 @@ def delete_recipe(recipe_id):
 
 # Admin functions
 
+# retrieve list of recipe names
 @app.route("/get_names")
 def get_names():
     recipes = list(mongo.db.recipes.find())
     return render_template("manage.html", recipes=recipes)
 
+# function to delete any recipe
 @app.route("/admin_delete_recipe/<recipe_id>")
 def admin_delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Your recipe has now been deleted")
     return redirect(url_for("get_names"))
 
+# function to edit any recipe
 @app.route("/admin_edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def admin_edit_recipe(recipe_id):
     if request.method == "POST":
@@ -218,12 +241,13 @@ def admin_edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# function for admin to click recipe name to show full details
 @app.route("/get_single_recipe/<recipe_id>")
 def get_single_recipe(recipe_id):
     recipes = list(mongo.db.recipes.find())
     return render_template("one_recipe.html", recipes=recipes)
 
-
+# forgot password function
 @app.route("/forgot_pass")
 def forgot_pass():
     return "Forgot Password"

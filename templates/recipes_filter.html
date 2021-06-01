@@ -14,23 +14,23 @@
 </div>
 <div class="collapse container text-background py-3" id="collapseExample">
         <div class="card card-body">
-            <h4 class="other-text black-text"> <i class="fas fa-utensils"></i> Filter By Course</h3>
-                <ul class="list-inline">
+            <h4 class="other-text black-text form-label"> <i class="fas fa-utensils"></i> Course</h3>
+                
                         
-                        <li class="list-inline-item"><a class="btn btn-secondary" href="{{url_for('get_recipes_by_category',category_name='Starter')}}">Starters</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="{{url_for('get_recipes_by_category',category_name='Sides')}}">Sides</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="{{url_for('get_recipes_by_category',category_name='Mains')}}">Mains</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="{{url_for('get_recipes_by_category',category_name='Dessert')}}">Desserts</a></li>
-                </ul>
-            <h4 class="other-text black-text"> <i class="fas fa-utensils"></i> Filter by Maximum Difficulty Rating</h3>
-                <ul class="list-inline">
-                        
-                        <li class="list-inline-item"><a class="btn btn-secondary" href="">1</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="">2</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="">3</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="">4</a></li>
-                        <li class="list-inline-item"><a class="btn btn-secondary"href="">5</a></li>
-                </ul>
+                        <a class="btn btn-secondary" href="{{url_for('get_recipes_by_category',category_name='Starter')}}">Starters</a></option>
+                        <a class="btn btn-secondary"href="{{url_for('get_recipes_by_category',category_name='Sides')}}">Sides</a></option>
+                        <a class="btn btn-secondary"href="{{url_for('get_recipes_by_category',category_name='Mains')}}">Mains</a></option>
+                        <a class="btn btn-secondary"href="{{url_for('get_recipes_by_category',category_name='Desserts')}}">Desserts</a></option>
+                
+            <label for="rating-search" class="my-3 other-text black-text"><i class="fas fa-star-half-alt"></i> Max difficulty Rating</label>
+                <select class="form-control" id="rating-search" name="rating-search">
+                    <option value="" disabled selected>Choose the maximum difficulty</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
         </div>
     </div>
 

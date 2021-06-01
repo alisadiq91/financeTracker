@@ -49,3 +49,9 @@ $(function(){
         return false;
     });
 });
+
+// With JQuery
+$("#difficulty").slider();
+$("#difficulty").on("slide", function(slideEvt) {
+	$("#sliderValue").text(slideEvt.value);
+});
