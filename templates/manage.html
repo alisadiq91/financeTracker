@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+{% if session.user|lower == "admin"|lower %}
 <!--manage page for admin users only -->
 <div class="container text-background mt-5 py-5">
     <h2 class="text-center mb-5 titles">Manage Recipes</h2>
@@ -29,5 +29,16 @@
        
     
 </div>
+{% else %}
+<div class="text-background container d-flex justify-content-center my-5 py-5">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+<!--title to show error -->
+            <h1 class="py-3 titles">Error! This is an admin only page</h1>
+            <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+    </div>
+</div>
 
+{% endif %}
 {% endblock %}

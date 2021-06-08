@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
+
+{% if session.user %}
 <div class="container text-background mt-5 py-5">
         <h2 class="text-center mb-5 titles">Edit your recipe</h2>
 <!--form to edit existing recipe in the database -->
@@ -85,6 +87,22 @@
         </div>
     </form>
 </div>
+
+{% else %}
+
+<div class="text-background container d-flex justify-content-center my-5 py-5">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+<!--title to show error -->
+            <h1 class="py-3 titles">Error! You must be logged in to edit a recipe.</h1>
+            <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
 
 
 {% endblock %}
