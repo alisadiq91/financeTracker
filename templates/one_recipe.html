@@ -14,16 +14,24 @@
                 </div>
                 <div class="col-6 other-text">
 <!--details of recipe -->
-                    <h3>Food Name : {{ recipe.food_name.capitalize() }}</h3>
-                    <h4>Course : {{ recipe.category_name }}</h4>
-                    <h4>Difficulty level : {{ recipe.difficulty }} out of 5</h4>
-                    <h4>Time : {{ recipe.time }} minutes</h4>
+                    <h3><span class="font-weight-bold black-text">Food Name : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.food_name.capitalize() }}</h3>
+                    <h4><span class="font-weight-bold black-text">Course : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.category_name }}</h4>
+                    <h4><span class="font-weight-bold black-text">Description : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.description }}</h4>
+                    <h4><span class="font-weight-bold black-text">Difficulty Level : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.difficulty }} out of 5</h4>
+                    <h4><span class="font-weight-bold black-text">Time : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.time }} minutes</h4>
                 </div>
             </div>
-            <div class="row">
+             <div class="row">
                 <div class="col other-text text-left">
-                    <h4>Ingredients needed : {{ recipe.ingredients1 }}</h4>
-                    <h4>Method : {{ recipe.method1 }}</h4>
+<!--recipe ingredients and method -->  
+                    <h4 class="font-weight-bold black-text">Ingredients needed : </h4>
+                    <ol>
+                        <li>{{ recipe.ingredients1 }}</li>        
+                    </ol>
+                    <h4 class="font-weight-bold black-text">Method :</h4>
+                    <ol>
+                        <li>{{ recipe.method1 }}</li>   
+                    </ol> 
                 </div>
             </div>
      
