@@ -42,7 +42,7 @@
 
    
 {% if recipes|length > 0 %}
-<div class="container text-background">
+<div class="container text-background pb-2">
     <h2 class="titles text-center mt-5 py-5">Recipes</h2>
         {% for recipe in recipes %}
         <div class="mb-5 border border-dark rounded">
@@ -83,9 +83,11 @@
                     <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-3">Delete Recipe</a>
                 </div>
             </div>
-        </div>
+        
             {% endif %}
+        </div>
         {% endfor %}
+</div>
 {% else %}
 <!--div to show if recipe number = 0  -->   
     <div class="container text-background py-5 mt-5 no-recipe">

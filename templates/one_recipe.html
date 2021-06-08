@@ -3,7 +3,7 @@
 
 {% if session.user %}
 <!--page to show single recipe when clicked on from manage.html or profile.html -->
-<div class="container text-background">
+<div class="container text-background pb-2">
     <h2 class="titles text-center mt-5 py-5">Recipe</h2>
         {% for recipe in recipes %}
         <div class="mb-5 border border-dark rounded">
@@ -44,10 +44,10 @@
                     <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-3">Delete Recipe</a>
                 </div>
             </div>
-        </div>
             {% endif %}
+            
+        </div>
         {% endfor %}
-
 </div>
 
 {% else %}
