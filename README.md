@@ -201,7 +201,11 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 7. Edit/Delete – if the user is the creator of the recipe, bootstrap buttons are shown underneath to allow the user to edit or delete their recipe. Each delete button is followed by an alert to confirm whether the user would like to delete the recipe. If the user is logged in as admin, these buttons are shown on each recipe. 
 
-8. Pagination – A pagination function has been set up to not have too many recipes showing on 1 page at a time. It has been set to show a maximum of 3 recipes on each page. The user can navigate through the pages at the bottom of the page using the numbered links. 
+8. Pagination – A pagination function has been set up to not have too many recipes showing on 1 page at a time. It has been set to show a maximum of 3 recipes on each page. The user can navigate through the pages at the bottom of the page using the numbered links. This is shown with a screenshot below:
+
+![pagination](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/pagination.png)
+
+
 
 # **Login page**
 
