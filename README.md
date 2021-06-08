@@ -1,4 +1,4 @@
-![logo]()
+![logo](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/logo.png)
 
 # **Ali Sadiq MS3 – Eat Middle East**
 
@@ -58,9 +58,19 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 # **Header**
 
+
+
 * Languages used – HTML, CSS, Python
 
 * Frameworks, Libraries & Programs Used - [Font Awesome](https://fontawesome.com/), Bootstrap, Flask
+
+### Header wireframe with no user logged in
+
+![wireframe-header-nouser](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-header-nouser.jpeg)
+
+### Header wireframe with user logged in
+
+![wireframe-header-user](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-header-user.jpeg)
 
 ## Features:
 
@@ -68,10 +78,20 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 2.  Burger Menu – in mobile view, the navigation menu becomes a burger menu, which the user can click to open the rest of the menu. This saves space for the user, allowing them to easily navigate through the website. 
 
+[header-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/header-mobile.png)
+
 3.  The nav bar contains various links which contain for loops to only show on certain conditions.
 •	When the user is not logged in, they are shown 4 links, Home, Recipes, Login, Register. As well as the search bar.
 •	Once the user logs in, they are shown 5 links, Home, Recipes, Profile, Add Recipe, Logout. As well as the search bar.
 •	If the user is admin, they are shown the same links as a user, but with a Manage Recipes link added. As well as the search bar. 
+
+### Header when no user is logged in:
+
+[header-nouser](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/header-desktop-logout.png)
+
+### Header when a user is logged in:
+
+[header-user](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/header-desktop-logout.png)
 
 4.  Each nav link has an icon from font awesome and changes colour to grey when hovering.
 
@@ -79,13 +99,19 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 ## Features to implement:
 
-1.  I wanted to add a register link in my header, and to link this to a register page. This page would allow the user the option to use our online ordering service on the website too as opposed to just the app. This is something that I will be able to do later in my developing career. 
+1.  My initial idea was to have a login/register feature in the header. I decided against it for design purposes.
 
 # **Footer**
 
+
+
 * Languages used – HTML, CSS
 
-* Frameworks, Libraries & Programs Used - [Font Awesome](https://fontawesome.com/), Bootstrap,
+* Frameworks, Libraries & Programs Used - [Font Awesome](https://fontawesome.com/), Bootstrap
+
+### Footer wireframe
+
+[wireframe-footer](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-footer.jpeg)
 
 ## Features:
 
@@ -93,15 +119,29 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 2.  Copyright – to show the website is protected by copyright, using font awesome. 
 
+### Footer on desktop:
+
+[footer-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/footer-desktop.png)
+
+### Footer on mobile:
+
+[footer-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/footer-mobile.png)
+
 # **Home page**
+
+
 
 * Languages used – HTML, CSS, Python
 
 * Frameworks, Libraries & Programs Used - [Font Awesome](https://fontawesome.com/), Bootstrap, Flask
 
-#### **Home page wireframe (desktop)**
+### Desktop wireframe
 
-#### **Home page wireframe (mobile)**
+[wireframe-home-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-home-desktop.jpeg)
+
+### Mobile wireframe
+
+[wireframe-home-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-home-mobile.jpeg)
 
 ## Features
 
@@ -113,13 +153,21 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 3.  Background image – all pages contain the same background image for consistency. This is a dining table containing various types of middle eastern food. I used a bright image to aid the design of the website. 
 
+### Homepage with no user logged in
+
+[homepage-no-user](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/home-desktop-logout.png)
+
+### Homepage with user logged in
+
+[homepage-user](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/home-desktop-login.png)
+
+### Homepage mobile view
+
+[homepage-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/home-mobile.png)
 
 ## Features to implement:
 
 1.  I had the idea to add a card telling the user how many new recipes have been added in the last 7 days, but I decided against it. I wanted to keep the website simple.  
-
-## Mobile View
-
 
 # **Recipe page**
 
@@ -129,9 +177,11 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 #### ** Recipe page desktop wireframe**
 
+[wireframe-recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-recipe-desktop.jpeg)
 
 #### ** Recipe page mobile wireframe.**
 
+[wireframe-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-recipe-mobile.jpeg)
 
 #### ** Recipe page screenshot.**
 
@@ -165,15 +215,19 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 #### **Login page wireframe desktop**
 
+[wireframe-login-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-login-desktop.jpeg)
 
 #### **Login page wireframe mobile**
 
+[wireframe-login-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-login-mobile.jpeg)
 
 ## Features
 
 1.	Form – this page contains a simple form for the user to be able to log into their account. The form contains 2 fields, for the user’s username and password, both fields set to required. These fields have font awesome icons to aid design. 
 
 2.  Incorrect entry – if the username or password are entered incorrectly, a flash message is shown to let the user know that either the username or password was incorrect. We do not want to tell the user which one is incorrect in case the user is attempting to enter an account that is not theirs. 
+
+[flash-incorrect-login](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/incorrect-login.png)
 
 3.  To check the password is correct, I used Werkzeug’s ‘check_password_hash’ function. 
 
@@ -183,13 +237,13 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 6.  Forgot password?
 
- 
+7. If a user is already logged in and tries to visit this page by editing the URL. They are met with this message:
 
-#### **Login page desktop** 
+[error-login](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-login.png)
 
+#### **Login page desktop and mobile** 
 
-#### **Image shows the mobile page for the covid-19 page:**
-
+[login-form](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/login.png)
 
 # **Register page**
 
@@ -199,9 +253,11 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 #### **Register page wireframe (desktop)**
 
+[wireframe-register-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-register-desktop.jpeg)
 
 #### **Register page wireframe (mobile)**
 
+[wireframe-register-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-register-mobile.jpeg)
 
 ## Features
 
@@ -212,15 +268,15 @@ c.	Confirm Password
 d.	Cooking level – for the user to provide their experience level using a drop-down list.
 e.	Favourite food
 These fields have font awesome icons to aid design and are set to required. 
+
 2.	Login – underneath the form, the user is shown where to login in case they already have an account.
 3.	Patterns and information – the username and password fields only allow A-Z and 0-9 to be entered. The username must be between 5-15 characters, and the password 7-15 characters. This information is shown below the relative field for the user. 
 4.	Once the user registers, a flash message is shown to tell them they have successfully registered and they are taken to their profile page.  
 
 
+#### **Desktop and Mobile view**
 
-#### **Mobile View**
-
-
+[register-form](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/register.png)
 
 # **Profile page**
 
@@ -230,7 +286,11 @@ These fields have font awesome icons to aid design and are set to required.
 
 #### **Profile page wireframe (desktop)**
 
+[wireframe-profile-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-profile-desktop.jpeg)
+
 #### **Profile page wireframe (mobile)**
+
+[wireframe-profile-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-profile-mobile.jpeg)
 
 ## Features
 
@@ -238,14 +298,32 @@ These fields have font awesome icons to aid design and are set to required.
 
 2.  User details – A container showing the username, cooking level and favourite food of the user is shown. 
 
+### **Desktop**
+[profile-details-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/profile-desktop-details.png)
+
+### **Mobile**
+
+[profile-details-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/profile-mobile-details.png)
+
 3.  Add recipe – A bootstrap button that links the user to the add recipe page. 
 
 4.  User’s recipes – Cards showing the user’s recipes that they have added. They show the recipe name (the user can click the name to show the full details of the recipe), who it was added by and gives the user the option to edit or delete the recipe. If the user wants to delete, they are asked to confirm whether they are sure they want to delete the recipe. 
 
-5.  Log out – A bootstrap button that allows the user to log out. An alert to confirm this is shown once clicked.  
+5.  Log out – A bootstrap button that allows the user to log out. An alert to confirm this is shown once clicked.
 
+[confirm-logout](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-logout.png)
 
-#### **Mobile View**
+6. If a user attempts to visit a profile page without being logged in. They are met with this message:
+
+[error-profile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-profile.png)
+
+#### **Desktop**
+
+[profile-recipes-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/profile-desktop-recipes.png)
+
+#### **Mobile**
+
+[profile-recipes-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/profile-mobile-recipes.png)
 
 # **Add recipe page**
 
@@ -253,9 +331,13 @@ These fields have font awesome icons to aid design and are set to required.
 
 * Frameworks, Libraries & Programs Used - Bootstrap, [Font Awesome](https://fontawesome.com/), Flask, MongoDB, JQuery
 
-#### ** Add recipe page wireframe (desktop)**
+#### ** Add/Edit recipe page wireframe (desktop)**
 
-#### ** Add recipe page wireframe (mobile)**
+[wireframe-add-edit-recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-add-desktop.jpeg)
+
+#### ** Add/Edit recipe page wireframe (mobile)**
+
+[wireframe-add-edit-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-add-mobile.jpeg)
 
 ## Features
 
@@ -271,23 +353,27 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 2.	Once the recipe is added using the bootstrap button to submit the form, the user is returned to the recipe page with a flash image to let the user know their recipe has been successfully added. 
 
+3. If a user tries to visit this page without being logged in (ie. edits the URL), they are met with this message:
+
+[error-add](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-add.png)
+
 # **Edit recipe page**
 
 * Languages used – HTML, CSS, Python, Javascript with JQuery
 
 * Frameworks, Libraries & Programs Used - Bootstrap, [Font Awesome](https://fontawesome.com/), Flask, MongoDB, JQuery
 
-#### ** Edit recipe page wireframe (desktop)**
-
-#### ** Edit recipe page wireframe (mobile)**
-
 ## Features
 
 1.	This page is exactly the same as the add recipe page mentioned above. The only differences are :
+
 a.	The input fields values are already filled with the recipe details from the recipe the user would like to edit.
+
 b.	The bootstrap buttons below now are Cancel, which takes the user back to the recipe page, or Submit changes, which gives the user a flash message to let them know their recipe has been updated.
 
-#### **Mobile View**
+3. If a user tries to visit this page without being logged in (ie. edits the URL), they are met with this message:
+
+[error-edit](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-edit.png)
 
 # **Manage recipe page**
 
@@ -297,13 +383,23 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 #### ** Manage recipe page wireframe (desktop)**
 
+[wireframe-manage-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-manage-desktop.jpeg)
+
 #### ** Manage recipe page wireframe (mobile)**
+
+[wireframe-manage-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-manage-mobile.jpeg)
 
 ## Features
 
-1.	This page is only accessible by the admin user.
+1.	This page is only accessible by the admin user. If a user tries to visit this page by only changing the URL. They are met with this message below:
+
+[error-manage](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-manage.png)
+
 2.	Add recipe – the user is shown a bootstrap button for them to be able to add a recipe
+
 3.	Recipe cards – The admin is shown all recipes added by all the users. Similar to the user profile page, they are shown a card with the recipe name (which they can click to reveal all the recipe’s details), a button to edit and delete the recipe, as well as who created the recipe. If the admin decides to delete the recipe, they are met with an alert to confirm this action is correct. 
+
+[confirm-delete](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-delete.png)
 
 # **TECHNOLOGIES**
 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--to ensure user is logged in before this page is accessible -->
 {% if session.user %}
 <!--profile page -->   
 <div class="container text-background mt-5 py-5 text-center">
@@ -43,11 +44,11 @@
 </div>
 
 {% else %}
-
+<!--defensive programming if user attempts to visit page by editing URL when they not logged in -->
 <div class="text-background container d-flex justify-content-center my-5 py-5">
     <div class="row">
         <div class="col-12 text-center mt-5">
-<!--title to show error -->
+<!--error message -->
             <h1 class="py-3 titles">Error! You must be logged in to view your profile.</h1>
             <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
             <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
