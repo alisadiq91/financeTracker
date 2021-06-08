@@ -171,18 +171,18 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 * Frameworks, Libraries & Programs Used - Bootstrap, [Font Awesome](https://fontawesome.com/), Flask, MongoDB, Jquery
 
-#### ** Recipe page desktop wireframe**
+#### Recipe page desktop wireframe
 
 ![wireframe-recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-recipe-desktop.jpeg)
 
-#### ** Recipe page mobile wireframe.**
+#### Recipe page mobile wireframe
 
 ![wireframe-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-recipe-mobile.jpeg)
 
-#### ** Recipe page screenshot.**
+#### Recipe page screenshot
 
 
-#### ** Recipe page mobile screenshot.**
+#### Recipe page mobile screenshot
 
 
 ## Features
@@ -328,11 +328,11 @@ These fields have font awesome icons to aid design and are set to required.
 
 * Frameworks, Libraries & Programs Used - Bootstrap, [Font Awesome](https://fontawesome.com/), Flask, MongoDB, JQuery
 
-#### ** Add/Edit recipe page wireframe (desktop)**
+#### Add/Edit recipe page wireframe (desktop)
 
 ![wireframe-add-edit-recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-add-desktop.jpeg)
 
-#### ** Add/Edit recipe page wireframe (mobile)**
+#### Add/Edit recipe page wireframe (mobile)
 
 ![wireframe-add-edit-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-add-mobile.jpeg)
 
@@ -378,11 +378,11 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 * Frameworks, Libraries & Programs Used - Bootstrap, [Font Awesome](https://fontawesome.com/), Flask, MongoDB, JQuery
 
-#### ** Manage recipe page wireframe (desktop)**
+#### Manage recipe page wireframe (desktop)
 
 ![wireframe-manage-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-manage-desktop.jpeg)
 
-#### ** Manage recipe page wireframe (mobile)**
+#### Manage recipe page wireframe (mobile)
 
 ![wireframe-manage-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-manage-mobile.jpeg)
 
