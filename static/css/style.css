@@ -206,7 +206,7 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
     color: white !important;
 }
 
-/* The slider itself */
+/* Styling for flash messages */
 .flash-message {
     text-align: center;
     color: white;
@@ -215,7 +215,10 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
     font-family: 'crushed', sans-serif;
 }
 
-/* bootstrap slider */
+
+/* bootstrap slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+/* The slider itself */
+
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
