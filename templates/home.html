@@ -3,16 +3,16 @@
 
 <div class="text-background container d-flex justify-content-center my-5">
     <div class="row">
-        <div class="col-12 text-center mt-5">
+        <div class="col-12 text-center my-5">
 <!--title with slogan underneath -->
             <h1 class=" titles">Welcome to our Middle Eastern Cookbook!</h1>
             <h3 class="mt-5 titles">For you!</h3>
             <h3 class="mt-5 titles">Made by you!</h3>
 <!--link to see all recipes for all users -->
-            <a href="{{ url_for ('get_recipes') }}" class="other-text btn btn-success my-5"><i class="fas fa-book"></i> See some recipes!</a>
+            <a href="{{ url_for ('get_recipes') }}" class="other-text btn btn-success my-4"><i class="fas fa-book"></i> See some recipes!</a>
 <!--if user is logged in they can add a recipe -->
             {% if session.user %}
-            <a href="{{ url_for ('add_recipe') }}" class="other-text btn btn-success my-5"><i class="fas fa-plus"></i> Add your own recipe!</a>
+            <a href="{{ url_for ('add_recipe') }}" class="other-text btn btn-success "><i class="fas fa-plus"></i> Add your own recipe!</a>
 <!--if user is not logged in they can login or register -->
             {% else %}
             <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5"><i class="fas fa-sign-in-alt"></i> Login</a>
