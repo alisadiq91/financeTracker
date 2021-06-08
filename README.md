@@ -219,7 +219,7 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 ## Features
 
-1.	Form – this page contains a simple form for the user to be able to log into their account. The form contains 2 fields, for the user’s username and password, both fields set to required. These fields have font awesome icons to aid design. 
+1.	Form – this page contains a simple form for the user to be able to log into their account. The form contains 2 fields, for the user’s username and password, both fields set to required to not allow the user to submit the form with no input. These fields have font awesome icons to aid design. 
 
 2.  Incorrect entry – if the username or password are entered incorrectly, a flash message is shown to let the user know that either the username or password was incorrect. We do not want to tell the user which one is incorrect in case the user is attempting to enter an account that is not theirs. 
 
@@ -258,17 +258,28 @@ With me being interesteed in this sector, I know what the user wants, making it 
 ## Features
 
 1.	Form – this page contains a simple form for the user to be able to register a new account. The form contains 5 fields:
+
 a.	Username
+
 b.	Password
-c.	Confirm Password
+
+c.	Confirm Password (screenshot shown below)
+
+![confirm-password](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-password.png)
+
 d.	Cooking level – for the user to provide their experience level using a drop-down list.
+
 e.	Favourite food
-These fields have font awesome icons to aid design and are set to required. 
 
-2.	Login – underneath the form, the user is shown where to login in case they already have an account.
-3.	Patterns and information – the username and password fields only allow A-Z and 0-9 to be entered. The username must be between 5-15 characters, and the password 7-15 characters. This information is shown below the relative field for the user. 
-4.	Once the user registers, a flash message is shown to tell them they have successfully registered and they are taken to their profile page.  
+These fields have font awesome icons to aid design.
 
+2. All fields are set to required, so the user is unable to submit the form without the required fields and formats.
+
+3.	Login – underneath the form, the user is shown where to login in case they already have an account.
+
+4.	Patterns and information – the username and password fields only allow A-Z and 0-9 to be entered. The username must be between 5-15 characters, and the password 7-15 characters. This information is shown below the relative field for the user. 
+
+5.	Once the user registers, a flash message is shown to tell them they have successfully registered and they are taken to their profile page.  
 
 #### **Desktop and Mobile view**
 
