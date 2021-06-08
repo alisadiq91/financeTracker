@@ -21,10 +21,10 @@
         </div>
     </div>
 <!--cards to show the recipes the user has created --> 
-        <div class="row">
+        <div class="row d-flex justify-content-center">
         {% for recipe in recipes %}
         {% if session.user|lower == recipe.created_by|lower %}
-            <div class="card col-lg-3 col-sm-12 text-center" style="width: 18rem;">
+            <div class="card col-lg-3 col-sm-12 text-center mb-1 " style="width: 18rem;">
                 <div class="card-body other-text">
                     <h5 class="card-title"><a href="{{ url_for ('get_single_recipe', recipe_id=recipe._id) }}" class="btn btn-info m-1">{{ recipe.food_name.capitalize() }}</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Added by {{ recipe.created_by }}</h6>
