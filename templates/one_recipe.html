@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% if session.user %}
 <!--page to show single recipe when clicked on from manage.html or profile.html -->
 <div class="container text-background">
     <h2 class="titles text-center mt-5 py-5">Recipe</h2>
@@ -40,4 +41,20 @@
         {% endfor %}
 
 </div>
+
+{% else %}
+
+<div class="text-background container d-flex justify-content-center my-5 py-5">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+<!--title to show error -->
+            <h1 class="py-3 titles">Error! You must be logged in to use this function.</h1>
+            <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
 {% endblock %}
