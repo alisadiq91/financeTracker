@@ -87,7 +87,7 @@ https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simpl
 .signup-form h2:before, .signup-form h2:after {
 	content: "";
 	height: 2px;
-	width: 30%;
+	width: 20%;
 	background: #d4d4d4;
 	position: absolute;
 	top: 50%;
@@ -236,7 +236,7 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
 
 /* add/edit recipe form method section width */
 .method-form {
-    width: 90%;
+    width: 80%;
 }
 
 /* add recipe button on various pages */
