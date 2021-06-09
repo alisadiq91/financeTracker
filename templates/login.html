@@ -24,23 +24,23 @@
             <form method="POST" action="{{ url_for('login')}}">
                 <h2 class="titles">Login</h2>
                 <div class="form-group">
-                    <i class="fas fa-user"></i>
-<!--username field -->
+                    <!--username field -->    
+                    <label for="username" class="form-label other-text black-text"><i class="fas fa-user"></i> Username</label>
                     <input type="text" class="form-control mt-3" name="username" id="username" placeholder="Username" required>
                 </div>
                 <div class="form-group">
-                    <i class="fas fa-lock"></i>
-<!--password field -->
+                <!--password field -->
+                    <label for="password" class="form-label other-text black-text"><i class="fas fa-lock"></i> Password</label>
                     <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" required>
-<!--forgot password function -->
+                <!--forgot password function -->
                     <span class="help-block" id="passwordHelpBlock"><a href="{{ url_for('forgot_pass')}}">Forgot Password?</a></span>
                 </div>
                 <div class="form-group">
-<!--submit button -->
+                <!--submit button -->
                     <button type="submit" class="other-text btn btn-success btn-lg btn-block">Login</button>
                 </div>
             </form>
-<!--link to register if not signed up -->
+            <!--link to register if not signed up -->
             <div class="text-background white-text">Don't have an account? <a href="{{ url_for('register')}}">Register here!</a></div>
         </div>
     </div>
