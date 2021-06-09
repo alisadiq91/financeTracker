@@ -26,11 +26,15 @@
 <!--recipe ingredients and method -->  
                     <h4 class="font-weight-bold black-text">Ingredients needed : </h4>
                     <ol>
-                        <li>{{ recipe.ingredients1 }}</li>        
+                         {% for ingredient in recipe.ingredients1 %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}          
                     </ol>
                     <h4 class="font-weight-bold black-text">Method :</h4>
                     <ol>
-                        <li>{{ recipe.method1 }}</li>   
+                        {% for method in recipe.method1 %}
+                            <li>{{ method }}</li>
+                        {% endfor %}    
                     </ol> 
                 </div>
             </div>

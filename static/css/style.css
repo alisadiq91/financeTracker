@@ -2,6 +2,7 @@
 
 body{
     background-image: url("https://mk0kaleelao979sb1ktf.kinstacdn.com/wp-content/uploads/2019/08/shutterstock_1690553083-1536x1025.jpg");
+    background-size: cover;
 }
 
 /* background for all text containers */
@@ -10,8 +11,7 @@ body{
 }
 
 footer{
-    bottom: 0;
-    width: 100%;
+    width: 100%;    
 }
 
 /* font styling for all titles */

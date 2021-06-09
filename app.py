@@ -123,7 +123,7 @@ def register():
             url_for("profile", username=session["user"]))
     return render_template("register.html")
 
-
+# login function
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -208,7 +208,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit_recipe)
         flash("Your recipe has been updated!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("get_single_recipe", recipe_id=recipe_id))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", -1)
@@ -237,41 +237,13 @@ def admin_delete_recipe(recipe_id):
     flash("Your recipe has now been deleted")
     return redirect(url_for("get_names"))
 
-# function to edit any recipe
-@app.route("/admin_edit_recipe/<recipe_id>", methods=["GET", "POST"])
-def admin_edit_recipe(recipe_id):
-    if request.method == "POST":
-        submit_recipe = {
-            "category_name": request.form.get("category_name"),
-            "food_name": request.form.get("food_name"),
-            "food_img": request.form.get("food_img"),
-            "description": request.form.get("description"),
-            "time": request.form.get("time"),
-            "difficulty": request.form.get("difficulty"),
-            "ingredients1": request.form.getlist("ingredients1"),
-            "method1": request.form.getlist("method1"),
-            "created_by": session["user"]
-        }
-        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit_recipe)
-        flash("Your recipe has been updated!")
-        return redirect(url_for("get_names"))
 
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    categories = mongo.db.categories.find().sort("category_name", -1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
-
-
-# function for admin to click recipe name to show full details
+# function for admin/user to click recipe name to show full details
 @app.route("/get_single_recipe/<recipe_id>")
 def get_single_recipe(recipe_id):
     recipes = list(mongo.db.recipes.find({"_id": ObjectId(recipe_id)}))
     return render_template("one_recipe.html", recipes=recipes)
 
-
-# forgot password function
-@app.route("/forgot_pass")
-def forgot_pass():
-    return "Forgot Password"
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

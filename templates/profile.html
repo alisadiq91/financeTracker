@@ -30,8 +30,8 @@
                     <h5 class="card-title"><a href="{{ url_for ('get_single_recipe', recipe_id=recipe._id) }}" class="btn btn-info m-1">{{ recipe.food_name.capitalize() }}</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Added by {{ recipe.created_by }}</h6>
 <!--edit and delete buttons -->   
-                    <a href="{{ url_for ('admin_edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-1">Edit</a>
-                    <a href="{{ url_for ('admin_delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-1">Delete</a>
+                    <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-1">Edit</a>
+                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-1">Delete</a>
                 </div>
             </div> 
         {% endif %}        

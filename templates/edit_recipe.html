@@ -59,26 +59,30 @@
     <div class="mb-3">
         <label for="ingredients1" class="form-label other-text"><i class="fas fa-pepper-hot"></i> Ingredients</label>
             <ul id="ingredients">
+                {% for ingredient in recipe.ingredients1 %}
                 <li class="list-item">
                         <div class="input-field">
                             <i class="fas fa-times mr-4 remove-list-item"></i>
-                            <input name="ingredients1" value="{{ recipe.ingredients1 }}" id="ingredients1" type="text" maxlength="100" placeholder="Add ingredient..." required>
+                           <input name="ingredients1" value="{{ingredient}}" id="ingredients{{loop.index}}" type="text" maxlength="100" placeholder="Add ingredient..." required>
                         </div>
                         <i class="fas fa-plus add-ingredient-list-item mr-4"></i> 
                 </li>
+                {% endfor %}
             </ul>
     </div>
 <!--method steps list -->
     <div class="mb-3">
         <label for="method1" class="form-label other-text"><i class="fas fa-list-ol"></i> Method</label>
             <ul id="method">
+                {% for method in recipe.method1 %}
                 <li class="list-item">
                     <i class="fas fa-plus add-method-list-item mr-4"></i>
                     <div class="input-field">
                         <i class="fas fa-times mr-4 remove-list-item"></i>
-                        <input name="method1" value="{{ recipe.method1 }}" id="method1" class="method-form" type="text" maxlength="100" placeholder="Add method step..." required>
+                        <input name="method1" value="{{method}}" id="method{{loop.index}}" class="method-form" type="text" maxlength="100" placeholder="Add method step..." required>
                     </div>        
                 </li>
+                {% endfor %}  
             </ul>
     </div>
 <!--cancel and submit changes buttons -->
