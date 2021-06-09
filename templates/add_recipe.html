@@ -1,101 +1,102 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!--to ensure user is logged in before this form is accessible -->
-{% if session.user %}
-<div class="container text-background mt-5 py-5">
-        <h2 class="text-center  mb-5 titles">Add your own recipe</h2>
-<!--form to add a new recipe to the database -->
-    <form class="container" method="POST" action="{{ url_for ('add_recipe') }}">
-    <div class="mt-3 mb-3">
-        <!--food image -->
-    <label for="food_img" class="mb-3 other-text"><i class="fas fa-image"></i> Paste a link to an image of your food here.<span data-tip="Find your image on google, 'copy image address' and paste it below."><i class="fas fa-question-circle"></i></span></label><br>
-    <input type="text" class="form-control" id="food_img" name="food_img" required>
-    </div>
+<div class="wrapper">
+    <!--to ensure user is logged in before this form is accessible -->
+    {% if session.user %}
+    <div class="container text-background mt-5 py-5">
+            <h2 class="text-center  mb-5 titles">Add your own recipe</h2>
+    <!--form to add a new recipe to the database -->
+        <form class="container" method="POST" action="{{ url_for ('add_recipe') }}">
+        <div class="mt-3 mb-3">
+            <!--food image -->
+        <label for="food_img" class="mb-3 other-text"><i class="fas fa-image"></i> Paste a link to an image of your food here.<span data-tip="Find your image on google, 'copy image address' and paste it below."><i class="fas fa-question-circle"></i></span></label><br>
+        <input type="text" class="form-control" id="food_img" name="food_img" required>
+        </div>
 
 
-<!--food name -->
-    <div class="mb-3">
-        <label for="food_name" class="other-text form-label"><i class="fas fa-cheese"></i> Recipe Name</label>
-        <input type="text" class="form-control" id="food_name" name="food_name" required>
-    </div>
-    <div class="form-group">
-<!--select field to choose course -->
-        <label for="category_name mt-3" class="other-text form-label"> <i class="fas fa-utensils course-form"></i> Course</label>
-            <select class="form-control" id="category_name" name="category_name" required>
-                <option value="" disabled selected>Select course</option>
-                {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                {% endfor %}
-            </select>
+    <!--food name -->
+        <div class="mb-3">
+            <label for="food_name" class="other-text form-label"><i class="fas fa-cheese"></i> Recipe Name</label>
+            <input type="text" class="form-control" id="food_name" name="food_name" required>
         </div>
-<!--field for user to give a short description of food -->
-    <div class="mb-3">
-        <label for="description" class="form-label other-text"><i class="fas fa-pen-fancy"></i> Please provide a short description of the food</label>
-        <input type="text" class="form-control" minlength="10" maxlength="100" id="description" name="description" required>
-    </div>
-<!--time taken to prepare and cook -->
-    <div class="mb-3">
-        <label for="time" class="form-label other-text"><i class="fas fa-stopwatch"></i> How long does it take? (in minutes)</label>
-        <input type="text" class="form-control" pattern="[0-9]+" id="time" name="time" required>
-    </div>
-<!--recipe difficulty level. Slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-    <div class="mb-3">
-    <label for="difficulty" class="form-label mr-3 other-text"><i class="fas fa-star-half-alt"></i> How difficult is this recipe (On a scale of 1-5)</label>
-    <input class="slider" name="difficulty" id="difficulty" type="range" list="tickmarks" min="1" max="5" step="1" required>
-    
-    <datalist>
-    <option value="1" label="1"></option>
-    <option value="2" label="2"></option>
-    <option value="3" label="3"></option>
-    <option value="4" label="4"></option>
-    <option value="5" label="5"></option>
-    </datalist>
-    </div>
+        <div class="form-group">
+    <!--select field to choose course -->
+            <label for="category_name mt-3" class="other-text form-label"> <i class="fas fa-utensils course-form"></i> Course</label>
+                <select class="form-control" id="category_name" name="category_name" required>
+                    <option value="" disabled selected>Select course</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+    <!--field for user to give a short description of food -->
+        <div class="mb-3">
+            <label for="description" class="form-label other-text"><i class="fas fa-pen-fancy"></i> Please provide a short description of the food</label>
+            <input type="text" class="form-control" minlength="10" maxlength="100" id="description" name="description" required>
+        </div>
+    <!--time taken to prepare and cook -->
+        <div class="mb-3">
+            <label for="time" class="form-label other-text"><i class="fas fa-stopwatch"></i> How long does it take? (in minutes)</label>
+            <input type="text" class="form-control" pattern="[0-9]+" id="time" name="time" required>
+        </div>
+    <!--recipe difficulty level. Slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+        <div class="mb-3">
+        <label for="difficulty" class="form-label mr-3 other-text"><i class="fas fa-star-half-alt"></i> How difficult is this recipe (On a scale of 1-5)</label>
+        <input class="slider" name="difficulty" id="difficulty" type="range" list="tickmarks" min="1" max="5" step="1" required>
+        
+        <datalist>
+        <option value="1" label="1"></option>
+        <option value="2" label="2"></option>
+        <option value="3" label="3"></option>
+        <option value="4" label="4"></option>
+        <option value="5" label="5"></option>
+        </datalist>
+        </div>
 
-<!--ingredients list -->
-<div class="mb-3">
-        <label for="ingredients1" class="form-label other-text"><i class="fas fa-pepper-hot"></i> Ingredients</label>
-            <ul id="ingredients">
-                <li class="list-item">
-                        
-                            <i class="fas fa-plus add-ingredient-list-item mr-4"></i>
-                        
-                        
-                </li>
-            </ul>
-    </div>
-<!--method steps list -->
+    <!--ingredients list -->
     <div class="mb-3">
-        <label for="method1" class="form-label other-text"><i class="fas fa-list-ol"></i> Method</label>
-            <ul id="method">
-                <li class="list-item">
-                        
-                            <i class="fas fa-plus add-method-list-item mr-4"></i>
-                        
-                        
-                </li>
-            </ul>
-    </div>
-<!--submit button -->
-        <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary other-text"><i class="fas fa-plus-square"></i> Add this recipe!</button>
+            <label for="ingredients1" class="form-label other-text"><i class="fas fa-pepper-hot"></i> Ingredients</label>
+                <ul id="ingredients">
+                    <li class="list-item">
+                            
+                                <i class="fas fa-plus add-ingredient-list-item mr-4"></i>
+                            
+                            
+                    </li>
+                </ul>
         </div>
-    </form>
-</div>
-{% else %}
-<!--defensive programming if user attempts to visit page by editing URL when they not logged in -->
-<div class="text-background container d-flex justify-content-center my-5 py-5">
-    <div class="row">
-        <div class="col-12 text-center mt-5">
-<!--error message -->
-            <h1 class="py-3 titles">Error! You must be logged in to add a recipe.</h1>
-            <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
-            <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
+    <!--method steps list -->
+        <div class="mb-3">
+            <label for="method1" class="form-label other-text"><i class="fas fa-list-ol"></i> Method</label>
+                <ul id="method">
+                    <li class="list-item">
+                            
+                                <i class="fas fa-plus add-method-list-item mr-4"></i>
+                            
+                            
+                    </li>
+                </ul>
+        </div>
+    <!--submit button -->
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary other-text"><i class="fas fa-plus-square"></i> Add this recipe!</button>
+            </div>
+        </form>
+    </div>
+    {% else %}
+    <!--defensive programming if user attempts to visit page by editing URL when they not logged in -->
+    <div class="text-background container d-flex justify-content-center my-5 py-5">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+    <!--error message -->
+                <h1 class="py-3 titles">Error! You must be logged in to add a recipe.</h1>
+                <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
+            </div>
         </div>
     </div>
-</div>
 
 {% endif %}
-
+</div>
 {% endblock %}

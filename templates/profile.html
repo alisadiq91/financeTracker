@@ -1,60 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!--to ensure user is logged in before this page is accessible -->
-{% if session.user %}
-<!--profile page -->   
-<div class="container text-background mt-5 py-5 text-center">
-<!--user details -->   
-    <h2 class ="mt-5 titles">{{ username.username.capitalize() }}'s profile</h2>
-    <h2 class ="mt-5 other-text"><span class="font-weight-bold">Cooking Level : </span> {{ username.chef_level.capitalize() }}</h2>
-    <h2 class ="my-5 other-text"><span class="font-weight-bold">Favourite Food : </span> {{ username.favourite.capitalize() }}</h2>
-</div>
+<div class="wrapper">
+    <!--to ensure user is logged in before this page is accessible -->
+    {% if session.user %}
+    <!--profile page -->   
+    <div class="container text-background mt-5 py-5 text-center">
+    <!--user details -->   
+        <h2 class ="mt-5 titles">{{ username.username.capitalize() }}'s profile</h2>
+        <h2 class ="mt-5 other-text"><span class="font-weight-bold">Cooking Level : </span> {{ username.chef_level.capitalize() }}</h2>
+        <h2 class ="my-5 other-text"><span class="font-weight-bold">Favourite Food : </span> {{ username.favourite.capitalize() }}</h2>
+    </div>
 
-<div class="container text-background">
-  
-    <h2 class="titles text-center mt-5 py-5">Your Recipes</h2>
-       
-    <div class="row">
-        <div class="col-12">
-<!--button to add recipe -->   
-        <a class="btn btn-primary mb-4 d-flex justify-content-center add-button other-text" href="{{ url_for ('add_recipe') }}">Add Recipe</a>
+    <div class="container text-background">
+    
+        <h2 class="titles text-center mt-5 py-5">Your Recipes</h2>
+        
+        <div class="row">
+            <div class="col-12">
+    <!--button to add recipe -->   
+            <a class="btn btn-primary mb-4 d-flex justify-content-center add-button other-text" href="{{ url_for ('add_recipe') }}">Add Recipe</a>
+            </div>
+        </div>
+    <!--cards to show the recipes the user has created --> 
+            <div class="row d-flex justify-content-center">
+            {% for recipe in recipes %}
+            {% if session.user|lower == recipe.created_by|lower %}
+                <div class="card col-lg-3 col-sm-12 text-center mb-1 " style="width: 18rem;">
+                    <div class="card-body other-text">
+                        <h5 class="card-title"><a href="{{ url_for ('get_single_recipe', recipe_id=recipe._id) }}" class="btn btn-info m-1">{{ recipe.food_name.capitalize() }}</a></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Added by {{ recipe.created_by }}</h6>
+    <!--edit and delete buttons -->   
+                        <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-1">Edit</a>
+                        <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-1">Delete</a>
+                    </div>
+                </div> 
+            {% endif %}        
+            {% endfor %}
+            </div>    
+    <!--logout button -->   
+            <div class="d-flex justify-content-center mt-5 pb-5">
+                <a class="text-background btn white-text logout-confirm" href="{{ url_for ('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+    </div>
+
+    {% else %}
+    <!--defensive programming if user attempts to visit page by editing URL when they not logged in -->
+    <div class="text-background container d-flex justify-content-center my-5 py-5">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+    <!--error message -->
+                <h1 class="py-3 titles">Error! You must be logged in to view your profile.</h1>
+                <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
+            </div>
         </div>
     </div>
-<!--cards to show the recipes the user has created --> 
-        <div class="row d-flex justify-content-center">
-        {% for recipe in recipes %}
-        {% if session.user|lower == recipe.created_by|lower %}
-            <div class="card col-lg-3 col-sm-12 text-center mb-1 " style="width: 18rem;">
-                <div class="card-body other-text">
-                    <h5 class="card-title"><a href="{{ url_for ('get_single_recipe', recipe_id=recipe._id) }}" class="btn btn-info m-1">{{ recipe.food_name.capitalize() }}</a></h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Added by {{ recipe.created_by }}</h6>
-<!--edit and delete buttons -->   
-                    <a href="{{ url_for ('edit_recipe', recipe_id=recipe._id) }}" class="btn btn-warning m-1">Edit</a>
-                    <a href="{{ url_for ('delete_recipe', recipe_id=recipe._id) }}" class="delete-confirm btn btn-danger m-1">Delete</a>
-                </div>
-            </div> 
-        {% endif %}        
-        {% endfor %}
-        </div>    
-<!--logout button -->   
-        <div class="d-flex justify-content-center mt-5 pb-5">
-            <a class="text-background btn white-text logout-confirm" href="{{ url_for ('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </div>
-</div>
 
-{% else %}
-<!--defensive programming if user attempts to visit page by editing URL when they not logged in -->
-<div class="text-background container d-flex justify-content-center my-5 py-5">
-    <div class="row">
-        <div class="col-12 text-center mt-5">
-<!--error message -->
-            <h1 class="py-3 titles">Error! You must be logged in to view your profile.</h1>
-            <a href="{{ url_for ('login') }}" class="other-text btn btn-success my-5 "><i class="fas fa-sign-in-alt"></i> Login</a>
-            <a href="{{ url_for ('register') }}" class="other-text btn btn-success my-5"> <i class="fas fa-user-plus"></i> Register</a>
-        </div>
-    </div>
+    {% endif %}
 </div>
-
-{% endif %}
 {% endblock %}

@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="text-background container d-flex justify-content-center my-5 py-5">
-    <div class="row">
-        <div class="col-12 text-center mt-5">
-<!--error message -->
-            <h1 class="py-3 titles">Oh no! It looks like this page does not exist anymore!</h1>
-            <a href="{{ url_for ('go_home') }}" class="other-text btn btn-success my-5 "><i class="fas fa-home"></i> Return to home</a>
-            <a href="{{ url_for ('get_recipes') }}" class="other-text btn btn-success my-5"> <i class="fas fa-book"></i> See all recipes</a>
+<div class="wrapper">
+    <div class="text-background container d-flex justify-content-center my-5 py-5">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+    <!--error message -->
+                <h1 class="py-3 titles">Oh no! It looks like this page does not exist anymore!</h1>
+                <a href="{{ url_for ('go_home') }}" class="other-text btn btn-success my-5 "><i class="fas fa-home"></i> Return to home</a>
+                <a href="{{ url_for ('get_recipes') }}" class="other-text btn btn-success my-5"> <i class="fas fa-book"></i> See all recipes</a>
+            </div>
         </div>
     </div>
 </div>
-
 
 {% endblock %}

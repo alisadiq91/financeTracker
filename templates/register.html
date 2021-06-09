@@ -1,72 +1,74 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% if session.user %}
-<!--defensive programming if user attempts to visit page by editing URL when they are already logged in -->
-<div class="text-background container d-flex justify-content-center my-5 py-5">
-    <div class="row">
-        <div class="col-12 text-center mt-5">
-<!--error message to show -->
-            <h1 class="py-3 titles">You are already logged in!</h1>
-            <a href="{{ url_for ('profile', username=session['user'])}}" class="other-text btn btn-success my-5 "><i class="fas fa-user nav-user"></i> My profile</a>
-            <a href="{{ url_for ('logout') }}" class="other-text btn btn-success my-5 logout-confirm"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+<div class="wrapper">
+    {% if session.user %}
+    <!--defensive programming if user attempts to visit page by editing URL when they are already logged in -->
+    <div class="text-background container d-flex justify-content-center my-5 py-5">
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+    <!--error message to show -->
+                <h1 class="py-3 titles">You are already logged in!</h1>
+                <a href="{{ url_for ('profile', username=session['user'])}}" class="other-text btn btn-success my-5 "><i class="fas fa-user nav-user"></i> My profile</a>
+                <a href="{{ url_for ('logout') }}" class="other-text btn btn-success my-5 logout-confirm"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
         </div>
     </div>
-</div>
 
-{% else %}
-<!--if user is not logged in, page shows as usual -->
-<div class="container">
-    <div class="row">
-<!--bootstrap form to register from https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-registration-form-->
-        <div class="signup-form text-center">
-            <form method="POST" action="{{ url_for('register')}}" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Passwords do not match." : "")'>
-                <h2 class="titles">Register</h2>
-                <p class="hint-text">Create your account. It's free and only takes a minute.</p>
-                <div class="form-group">
-                    <!--username the user wants with information below for which format is needed -->
-                    <label for="username" class="form-label other-text black-text"><i class="fas fa-user"></i> Username</label>
-                    <input type="text" class="form-control mt-3" name="username" id="username" placeholder="Username" pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" required>
-                    <small class="form-text text-muted">Must be between 5-15 characters. No special characters allowed eg. ! ?</small>	  	
-                </div>
-                <div class="form-group">
-                    <!--password the user wants with information below for which format is needed -->
-                    <label for="password" class="form-label other-text black-text"><i class="fas fa-lock"></i> Password</label>
-                    <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" pattern="^[a-zA-Z0-9]{7,15}$" minlength="7" maxlength="15" required>
-                    <small class="form-text text-muted">Must be between 7-15 characters. No special characters allowed eg. ! ?</small>
-                </div>
-                <div class="form-group">
-                    <!--confirm password field to check user has entered correctly twice -->
-                     <label for="confirm" class="form-label other-text black-text"><i class="fas fa-lock"></i> Confirm Password</label>
-                    <input class="form-control mt-3" id="confirm" name="confirm" type="password" placeholder="Confirm Password" minlength="7" maxlength="15"
-                        pattern="^[a-zA-Z0-9]{7,15}$" required>
-                </div>
-                <div class="form-group">
-                    <!--fields to gain more information about the users cooking skills and favourite food -->
-                     <label for="chef_level" class="form-label other-text black-text"><i class="fas fa-utensils"></i> Your cooking level</label>
-                            <select class="form-control mt-3" id="chef_level" name="chef_level" required>
-                                <option value="" disabled selected>Select your cooking level, be honest!</option>
-                                <option value="beginner" id="beginner" >Beginner</option>
-                                <option value="amateur" id="amateur">Amateur</option>
-                                <option value="accomplished"id="accomplished">Accomplished</option>
-                                <option value="advanced" id="advanced">Advanced</option>
-                                <option value="master" id="master">Master</option>
-                            </select>
-                </div>
-                <div class="form-group">
-                    <label for="favourite" class="form-label other-text black-text"><i class="fas fa-heart"></i> What is your favourite food?</label>
-                    <input type="text" class="form-control mt-3" name="favourite" id="favourite" placeholder="Your favourite food" pattern="^[a-zA-Z0-9]{4,25}$" minlength="4" maxlength="25" required>
-                </div>
+    {% else %}
+    <!--if user is not logged in, page shows as usual -->
+    <div class="container">
+        <div class="row">
+    <!--bootstrap form to register from https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-registration-form-->
+            <div class="signup-form text-center">
+                <form method="POST" action="{{ url_for('register')}}" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Passwords do not match." : "")'>
+                    <h2 class="titles">Register</h2>
+                    <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+                    <div class="form-group">
+                        <!--username the user wants with information below for which format is needed -->
+                        <label for="username" class="form-label other-text black-text"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" class="form-control mt-3" name="username" id="username" placeholder="Username" pattern="^[a-zA-Z0-9]{5,15}$" minlength="5" maxlength="15" required>
+                        <small class="form-text text-muted">Must be between 5-15 characters. No special characters allowed eg. ! ?</small>	  	
+                    </div>
+                    <div class="form-group">
+                        <!--password the user wants with information below for which format is needed -->
+                        <label for="password" class="form-label other-text black-text"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" class="form-control mt-3" name="password" id="password" placeholder="Password" pattern="^[a-zA-Z0-9]{7,15}$" minlength="7" maxlength="15" required>
+                        <small class="form-text text-muted">Must be between 7-15 characters. No special characters allowed eg. ! ?</small>
+                    </div>
+                    <div class="form-group">
+                        <!--confirm password field to check user has entered correctly twice -->
+                        <label for="confirm" class="form-label other-text black-text"><i class="fas fa-lock"></i> Confirm Password</label>
+                        <input class="form-control mt-3" id="confirm" name="confirm" type="password" placeholder="Confirm Password" minlength="7" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{7,15}$" required>
+                    </div>
+                    <div class="form-group">
+                        <!--fields to gain more information about the users cooking skills and favourite food -->
+                        <label for="chef_level" class="form-label other-text black-text"><i class="fas fa-utensils"></i> Your cooking level</label>
+                                <select class="form-control mt-3" id="chef_level" name="chef_level" required>
+                                    <option value="" disabled selected>Select your cooking level, be honest!</option>
+                                    <option value="beginner" id="beginner" >Beginner</option>
+                                    <option value="amateur" id="amateur">Amateur</option>
+                                    <option value="accomplished"id="accomplished">Accomplished</option>
+                                    <option value="advanced" id="advanced">Advanced</option>
+                                    <option value="master" id="master">Master</option>
+                                </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="favourite" class="form-label other-text black-text"><i class="fas fa-heart"></i> What is your favourite food?</label>
+                        <input type="text" class="form-control mt-3" name="favourite" id="favourite" placeholder="Your favourite food" pattern="^[a-zA-Z0-9]{4,25}$" minlength="4" maxlength="25" required>
+                    </div>
 
-                <div class="form-group">
-<!--button to submit form to register -->
-                    <button type="submit" class="other-text btn btn-success btn-lg btn-block">Register Now</button>
-                </div>
-            </form>
-<!--link to login if user already has an account -->
-            <div class="text-background white-text">Already have an account? <a href="{{ url_for('login')}}">Sign in</a></div>
+                    <div class="form-group">
+    <!--button to submit form to register -->
+                        <button type="submit" class="other-text btn btn-success btn-lg btn-block">Register Now</button>
+                    </div>
+                </form>
+    <!--link to login if user already has an account -->
+                <div class="text-background white-text">Already have an account? <a href="{{ url_for('login')}}">Sign in</a></div>
+            </div>
         </div>
     </div>
+    {% endif %}
 </div>
-{% endif %}
 {% endblock %}
