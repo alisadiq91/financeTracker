@@ -1,3 +1,5 @@
+[testing](https://github.com/alisadiq91/middleEasternCookbook/blob/master/TESTING.md)
+
 ![logo](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/logo.png)
 
 # **Ali Sadiq MS3 – Eat Middle East**
