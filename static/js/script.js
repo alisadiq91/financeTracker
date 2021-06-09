@@ -15,6 +15,7 @@ $('#ingredients').on("click", ".remove-list-item", function (event) {
     $(this).parent().remove();
 });
 
+
 // Add method step item on click
 $('.add-method-list-item').click(function (event) {
     let methodItem = `<li class="list-item">
