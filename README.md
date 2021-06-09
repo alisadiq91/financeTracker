@@ -10,7 +10,7 @@ The website is called Eat Middle East. They are an online recipe database where 
 
 ## **Table of Contents**
 
-  * [1. **UX**](#UX-USER-STORIES**)
+  * [1. **UX**](#UX-USER-STORIES)
     + [**First time users**](#first-time-visitor-goals)
     + [**Returning users**](#returning-visitor-goals)
     + [**Frequent users**](#frequent-user-goals)
