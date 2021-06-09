@@ -23,7 +23,8 @@ PER_PAGE = 3
 
 
 # Pagination
-# used code from https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+# used code from
+# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
 def paginated(recipes):
     """ Sets Pagination for long content pages """
     page, per_page, offset = get_page_args(
@@ -55,7 +56,8 @@ def not_found(e):
 def go_home():
     return render_template("home.html")
 
-# Recipe page showing all recipes   
+
+# Recipe page showing all recipes
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -63,7 +65,9 @@ def get_recipes():
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
     return render_template("recipes.html",
-                        recipes=recipes_paginated, ingredients1=ingredients1, pagination=pagination)
+                           recipes=recipes_paginated,
+                           ingredients1=ingredients1,
+                           pagination=pagination)
 
 
 # Search box on navbar and recipe page
@@ -75,7 +79,8 @@ def search():
     pagination = pagination_args(recipes)
     categories = mongo.db.categories.find().sort("category_name", -1)
     return render_template("recipes.html", recipes=recipes_paginated,
-                    pagination=pagination, categories=categories)
+                           pagination=pagination,
+                           categories=categories)
 
 
 # filter function to show each course
@@ -85,7 +90,7 @@ def get_recipes_by_category(category_name):
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
     return render_template("recipes_filter.html", recipes=recipes_paginated,
-                    pagination=pagination, category_name=category_name)
+                           pagination=pagination, category_name=category_name)
 
 
 # filter function for difficulty level
@@ -95,7 +100,7 @@ def get_recipes_by_difficulty(difficulty):
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
     return render_template("recipes_filter.html", recipes=recipes_paginated,
-                    pagination=pagination, difficulty=difficulty)
+                           pagination=pagination, difficulty=difficulty)
 
 
 # register functionality
@@ -108,7 +113,7 @@ def register():
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-  
+
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password")),
@@ -116,12 +121,13 @@ def register():
             "chef_level": request.form.get("chef_level").lower()
         }
         mongo.db.users.insert_one(register)
-        
+
         session["user"] = request.form.get("username").lower()
         flash("You are now registered!")
         return redirect(
             url_for("profile", username=session["user"]))
     return render_template("register.html")
+
 
 # login function
 @app.route("/login", methods=["GET", "POST"])
@@ -132,7 +138,7 @@ def login():
         # password check
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Hey there {}!".format(request.form.get("username")))
                     return redirect(
@@ -161,12 +167,14 @@ def profile(username):
     # redirect to login page if not logged in
     return redirect(url_for("login"))
 
+
 # logout function
 @app.route("/logout")
 def logout():
     flash("You have now logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 # add recipe function
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -208,11 +216,13 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit_recipe)
         flash("Your recipe has been updated!")
-        return redirect(url_for("get_single_recipe", recipe_id=recipe_id))
+        return redirect(url_for("get_single_recipe",
+                                recipe_id=recipe_id))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", -1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+    return render_template("edit_recipe.html",
+                           recipe=recipe, categories=categories)
 
 
 # delete recipe function
@@ -222,6 +232,7 @@ def delete_recipe(recipe_id):
     flash("Your recipe has now been deleted")
     return redirect(url_for("get_recipes"))
 
+
 # Admin functions
 
 # retrieve list of recipe names
@@ -229,6 +240,7 @@ def delete_recipe(recipe_id):
 def get_names():
     recipes = list(mongo.db.recipes.find())
     return render_template("manage.html", recipes=recipes)
+
 
 # function to delete any recipe
 @app.route("/admin_delete_recipe/<recipe_id>")

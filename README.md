@@ -723,6 +723,8 @@ To launch a Http server using the development mode code for the application, use
 
 * [Bootstrap footer] (https://mdbootstrap.com/docs/standard/navigation/footer/)
 
+* [Pagination] (https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
+
 
 # **MEDIA**
 

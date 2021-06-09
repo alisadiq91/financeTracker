@@ -1,6 +1,6 @@
 // Add ingredient list item on click
 $('.add-ingredient-list-item').click(function (event) {
-    let ingredientItem = `<li class="list-item">
+    var ingredientItem = `<li class="list-item">
                                 <div class="input-field">
                                     <a class="remove-list-item"><i class="fas fa-times mr-4 "></i></a>
                                     <input name="ingredients1" id="ingredients1" type="text" maxlength="100" placeholder="Add ingredient..." required>
@@ -18,7 +18,7 @@ $("a.remove-list-item").on("click", function(event) {
 
 // Add method step item on click
 $('.add-method-list-item').click(function (event) {
-    let methodItem = `<li class="list-item">
+    var methodItem = `<li class="list-item">
                                 <div class="input-field">
                                     <i class="fas fa-times mr-4 remove-list-item"></i>
                                     <input name="method1" id="method1" class="method-form" type="text" maxlength="100" placeholder="Add method step..." required>
