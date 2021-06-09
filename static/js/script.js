@@ -7,30 +7,30 @@ $('.add-ingredient-list-item').click(function (event) {
                                 </div>
                           </li>`;      
                             
-    $(this).parent().after(ingredientItem);
-});
-
-// Remove ingredient list item on click
-$("a.remove-list-item").on("click", function(event) {
+    $(this).before(ingredientItem);
+    $("a.remove-list-item").on("click", function(event) {
     $(this).parent().parent().remove();
 });
-
+});
 
 // Add method step item on click
 $('.add-method-list-item').click(function (event) {
     var methodItem = `<li class="list-item">
                                 <div class="input-field">
-                                    <i class="fas fa-times mr-4 remove-list-item"></i>
+                                    <a class="remove-list-item"><i class="fas fa-times mr-4"></i></a>
                                     <input name="method1" id="method1" class="method-form" type="text" maxlength="100" placeholder="Add method step..." required>
                                 </div>
                           </li>`;      
                             
-    $(this).parent().after(methodItem);
+     $(this).before(methodItem);
+    $("a.remove-list-item").on("click", function(event) {
+    $(this).parent().parent().remove();
+});
 });
 
-// Remove method step item on click
-$('#method').on("click", ".remove-list-item", function (event) {
-    $(this).parent().remove();
+// Remove ingredient or method list item on click
+$("a.remove-list-item").on("click", function(event) {
+    $(this).parent().parent().remove();
 });
 
 // Function to confirm user wants to logout

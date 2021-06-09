@@ -1,5 +1,6 @@
 /* general css used across most pages */
 
+/* to keep footer to bottom of page without fixing it */
 html, body {
     height: 100%;
 }
@@ -13,6 +14,7 @@ html, body {
 footer {
     height: 130px;
 }
+
 body{
     background-image: url("https://mk0kaleelao979sb1ktf.kinstacdn.com/wp-content/uploads/2019/08/shutterstock_1690553083-1536x1025.jpg");
     background-size: cover;
@@ -160,6 +162,15 @@ https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simpl
 .list-item {
     list-style-type: none;
 }
+
+.remove-list-item{
+    color: black;
+}
+
+.remove-list-item:hover{
+    color: whitesmoke;
+}
+
 
 /* Tool tip for image address input 
 https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */

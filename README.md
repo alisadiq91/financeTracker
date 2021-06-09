@@ -434,6 +434,10 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 ![error-add](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-add.png)
 
+## Features to implement
+
+1. In the future, it would be a good idea to have a more interactive way to upload a picture of the food. This could be where the user can upload an image from their own files.
+
 # **Edit recipe page**
 
 * Languages used – HTML, CSS, Python, Javascript with JQuery

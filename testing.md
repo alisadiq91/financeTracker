@@ -4,71 +4,124 @@
 
 * No errors or warnings were found.
 
-![html-validator-index](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/html-index.png)
+![html-home](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-home.png)
 
-#### **Find us page**
-
-* No errors or warnings were found.
-
-![html-validator-findus](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/html-findus.png)
-
-#### **Covid page**
+#### **Recipe page**
 
 * No errors or warnings were found.
 
-![html-validator-covid](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/html-covid.png)
+![html-recipe](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-recipes.png)
 
-#### **FAQs page**
+#### **Login page**
 
 * No errors or warnings were found.
 
-![html-validator-faqs](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/html-faqs.png)
+![html-login](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-login.png)
 
-#### **Contact us page**
+#### **Register page**
+
+* No errors or warnings were found.
+
+![html-register](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-register.png)
+
+#### **Profile page**
 
 * No errors or warnings were found. 
 
-![html-validator-contact](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/html-contact.png)
+![html-profile](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-profile.png)
+
+#### **Add recipe page**
+
+* No errors or warnings were found. 
+
+![html-add](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-add.png)
+
+#### **Edit recipe page**
+
+* No errors or warnings were found. 
+
+![html-edit](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-edit.png)
+
+#### **Filtered recipes page**
+
+* No errors or warnings were found. 
+
+![html-filter](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-filter.png)
+
+#### **Single recipe page**
+
+* No errors or warnings were found. 
+
+![html-single](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-single.png)
+
+#### **Manage page**
+
+* No errors or warnings were found. 
+
+![html-manage](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-manage.png)
+
+#### **404 error page**
+
+* No errors or warnings were found. 
+
+![html-404](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-404.png)
 
 ## CSS validation
 
-* 
+* The errors found were with the bootstrap model, as well as the warnings found.
 
-![css-validator](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/cssvalidator.png)
+![css-validator](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/css-validator.png)
 
 ## JavaScript code quality tool
 
 * I used [JSHint](https://jshint.com/) to check my JavaScript code for errors.
 
-* There were no errors for either script.js
+* There were no errors for script.js
+
+![js-hint](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/js-hint.png)
 
 ## Lighthouse
 
-* I used inspect on google chrome to use the Lighthouse tool to check the performance of my web pages. The performance results were all either 99 or 100. Below are the results for each webpage.
+* I used inspect on google chrome to use the Lighthouse tool to check the performance of my web pages. The performance results were all 95 or above. Below are the results for each webpage.
 
 ### Home page
-![lighthouse-home](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-home.png)
+![lighthouse-home](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-home.png)
 
 ### Recipe page
-![lighthouse-findus](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-findus.png)
+![lighthouse-recipes](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-recipe.png)
 
 ### Login page
-![lighthouse-covid](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-covid.png)
+![lighthouse-login](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-login.png)
+
 
 ### Register page
-![lighthouse-faqs](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-faqs.png)
+![lighthouse-register](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-register.png)
+
 
 ### Profile page
-![lighthouse-contact](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-contact.png)
+![lighthouse-profile](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-profile.png)
+
 
 ### Add recipe page
-![lighthouse-contact](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-contact.png)
+![lighthouse-add](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-add.png)
+
 
 ### Edit recipe page
-![lighthouse-contact](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-contact.png)
+![lighthouse-edit](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-edit.png)
+
 
 ### Manage recipe page
-![lighthouse-contact](https://github.com/alisadiq91/PharmOnline/blob/master/assets/images/lighthouse-contact.png)
+![lighthouse-manage](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-manage.png)
+
+
+## PEP8 Validation
+
+* I used [PEP8 Online Check](http://pep8online.com/) to check that my app.py file was PEP8 compliant.
+
+* The results showed no errors or warnings:
+
+![pep8](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/pep8.png)
+
 
 ## Bugs 
 
@@ -76,9 +129,22 @@
 
     * This was due to the function for the filter for the courses taking priority over the difficulty level function as it was before it in the python file. 
 
-    * To fix it I had to alter the 
+    * To fix it I had to alter the app.route to have both the functions working correctly.
 
     * The code is shown below:
+
+    ![filter-bug](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/python-filter.png)
+
+2. I had an issue where the input fields for the edit recipe form did not look the way I wanted. When extra ingredients were being added in addition to the pre-populated values from the database, the input fields were appearing in between the current fields.
+
+    * To fix this I created an <a> class around the remove-list-item class. I then moved the add ingredient class below the <li> element so it does not reappear with every added ingredient or method and so the new fields add below the current fields.
+
+    * The html and js code is shown below:
+
+    ![edit-bug-html](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/edit-bug-html.png)
+
+    ![edit-bug-js](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/edit-bug-js.png)
+
 
 # **UX Testing**
 
@@ -231,6 +297,6 @@
 
 * Each link was clicked various times on each page and each device to ensure they were all working correctly.
 
-* All the forms were filled out numerous times. Each form was filled out deliberately with errors to see if the flash messages and form validation were working correctly. 
+* All the forms were filled out numerous times. Each form was filled out deliberately with errors to see if the form validation was working correctly. 
 
 * I asked 10 family and friends to use the website and look for any errors or bugs. I asked them all to view the website on their laptop, phone and tablet. I also asked them to try all the links, and to fill the forms out with errors to see if it allowed them to submit.
