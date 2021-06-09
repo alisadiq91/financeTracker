@@ -558,7 +558,7 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 # **TESTING**
 
-[This section can be found here.](https://github.com/alisadiq91/middleEasternCookbook/blob/master/TESTING.md)
+[This section can be found here.](https://github.com/alisadiq91/middleEasternCookbook/blob/master/testing.md)
 
 # **DEPLOYMENT**
 
