@@ -2,17 +2,18 @@
 $('.add-ingredient-list-item').click(function (event) {
     let ingredientItem = `<li class="list-item">
                                 <div class="input-field">
-                                    <i class="fas fa-times mr-4 remove-list-item"></i>
+                                    <a class="remove-list-item"><i class="fas fa-times mr-4 "></i></a>
                                     <input name="ingredients1" id="ingredients1" type="text" maxlength="100" placeholder="Add ingredient..." required>
                                 </div>
                           </li>`;      
                             
-    $(this).parent().before(ingredientItem);
+    $(this).parent().after(ingredientItem);
 });
 
 // Remove ingredient list item on click
-$('#ingredients').on("click", ".remove-list-item", function (event) {
-    $(this).parent().remove();
+$("a.remove-list-item").on("click", function(event) {
+console.log($(this));
+console.log($(this).parent().parent());
 });
 
 
@@ -25,7 +26,7 @@ $('.add-method-list-item').click(function (event) {
                                 </div>
                           </li>`;      
                             
-    $(this).parent().before(methodItem);
+    $(this).parent().after(methodItem);
 });
 
 // Remove method step item on click

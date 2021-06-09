@@ -60,13 +60,13 @@
         <div class="mb-3">
             <label for="ingredients1" class="form-label other-text"><i class="fas fa-pepper-hot"></i> Ingredients</label>
                 <ul id="ingredients">
+                    <i class="fas fa-plus add-ingredient-list-item mr-4"></i>
                     {% for ingredient in recipe.ingredients1 %}
                     <li class="list-item">
                             <div class="input-field">
-                                <i class="fas fa-times mr-4 remove-list-item"></i>
+                                <a class="remove-list-item"><i class="fas fa-times mr-4"></i></a>
                             <input name="ingredients1" value="{{ingredient}}" id="ingredients{{loop.index}}" type="text" maxlength="100" placeholder="Add ingredient..." required>
                             </div>
-                            <i class="fas fa-plus add-ingredient-list-item mr-4"></i> 
                     </li>
                     {% endfor %}
                 </ul>
