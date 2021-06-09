@@ -12,8 +12,7 @@ $('.add-ingredient-list-item').click(function (event) {
 
 // Remove ingredient list item on click
 $("a.remove-list-item").on("click", function(event) {
-console.log($(this));
-console.log($(this).parent().parent());
+    $(this).parent().parent().remove();
 });
 
 
