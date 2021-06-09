@@ -124,9 +124,7 @@
 
 #### Result
 
-* The navbar contains a search bar to the right where the user can search the database by text by the recipe name or description.
-
-* The recipe page also contains a search bar at the top, that uses the same function as the search bar in the navbar. 
+* The recipe page contains a search bar at the top where the user can search the database by text by the recipe name or description. 
 
 #### Aim
 

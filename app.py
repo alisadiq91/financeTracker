@@ -70,7 +70,7 @@ def get_recipes():
                            pagination=pagination)
 
 
-# Search box on navbar and recipe page
+# Search box on recipe pages
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")

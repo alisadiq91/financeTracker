@@ -93,8 +93,6 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 # **Header**
 
-
-
 * Languages used – HTML, CSS, Python
 
 * Frameworks, Libraries & Programs Used - [Font Awesome](https://fontawesome.com/), Bootstrap, Flask
@@ -116,9 +114,12 @@ With me being interesteed in this sector, I know what the user wants, making it 
 ![header-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/header-mobile.png)
 
 3.  The nav bar contains various links which contain for loops to only show on certain conditions.
-•	When the user is not logged in, they are shown 4 links, Home, Recipes, Login, Register. As well as the search bar.
-•	Once the user logs in, they are shown 5 links, Home, Recipes, Profile, Add Recipe, Logout. As well as the search bar.
-•	If the user is admin, they are shown the same links as a user, but with a Manage Recipes link added. As well as the search bar. 
+
+•	When the user is not logged in, they are shown 4 links, Home, Recipes, Login, Register.
+
+•	Once the user logs in, they are shown 5 links, Home, Recipes, Profile, Add Recipe, Logout.
+
+•	If the user is admin, they are shown the same links as a user, but with a Manage Recipes link added.
 
 ### Header when no user is logged in:
 
@@ -130,11 +131,11 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 4.  Each nav link has an icon from font awesome and changes colour to grey when hovering.
 
-5.  A search bar is available for the user to be able to search the website for a particular recipe, this searches the MongoDB database for text in the recipe name and recipe description.  
-
 ## Features to implement:
 
-1.  My initial idea was to have a login/register feature in the header. I decided against it for design purposes.
+1. My initial idea was to have a login/register feature in the header. I decided against it for design purposes.
+
+2. I originally had a search bar to the right on the navbar, however I decided to remove it as I already had a search function on the recipe and recipe filter pages.
 
 # **Footer**
 
@@ -224,7 +225,7 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 ## Features
 
-1.  Search bar – A search bar is shown above the recipes for the user to be able to search any particular recipe they are looking for. Similar to the search bar in the navigation menu, it searches the database by text against recipe name and description. 
+1.  Search bar – A search bar is shown above the recipes for the user to be able to search any particular recipe they are looking for. It searches the database by text against recipe name and description. 
 
 ![recipe-search](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/recipe-search.png)
 
