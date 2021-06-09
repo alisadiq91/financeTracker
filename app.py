@@ -43,6 +43,12 @@ def pagination_args(recipes):
     return Pagination(page=page, per_page=PER_PAGE, total=total)
 
 
+@app.errorhandler(404)
+def not_found(e):
+    # To return error page when a 404 error occurs
+    return render_template("404.html")
+
+
 @app.route("/")
 # link to homepage
 @app.route("/go_home")
