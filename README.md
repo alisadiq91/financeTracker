@@ -12,7 +12,7 @@ The website is called Eat Middle East. They are an online recipe database where 
 
 ## First Time Visitor Goals
 
-1.  As a First Time Visitor, I want to view recipes created by others without having to make an account. 
+1.  As a First Time Visitor, I want to view recipes created by others without having to make an account.
 
 2.  As a First Time Visitor, I want to be able to register to create an account.
 
