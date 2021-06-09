@@ -576,7 +576,7 @@ The link above gave me the following steps.
 
 ### To clone this project:
 
-1. Follow this link to the [Project GitHub repository](https://github.com/alisadiq91/PharmOnline)
+1. Follow this link to the [Project GitHub repository](https://github.com/alisadiq91/middleEasternCookbook)
 
 2. Under the repository name, click "Clone or download".
 
