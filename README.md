@@ -4,6 +4,8 @@
 
 [View the live project here.]( https://middle-eastern-cookbook.herokuapp.com/)
 
+## **Project Overview**
+
 Welcome to the third project of my software development career. I have decided to create an online cookbook catered to middle eastern cuisine. The website will give users the opportunity to view, add, edit and delete recipes. Middle Eastern cuisine is one of my favourite, and I have a big passion for learning new recipes, therefore it is a project that I have a passion for. I will be using what I have learnt from the modules I have completed over the last few months. These include Python, the flask framework and MongoDB. I will also be using HTML, CSS, JavaScript, Jquery and the bootstrap framework, all of which I have used in previous projects. The main focus of this website is to create a CRUD application using Python. 
 
 The website is called Eat Middle East. They are an online recipe database where users can register to make an account, add/edit/delete their own recipes, while viewing the recipes created by others.
@@ -526,6 +528,7 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 * Flask:
 
     * Flask was used as a Python web framework that provides useful tools and features that make creating web applications in Python easier. 
+
 * MongoDB:
 
     * MongoDB was used as it is an easy and powerful way to store and retrieve huge amounts of data, quickly and effectively. 
@@ -538,39 +541,98 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
     * GitHub is used to store the projects code after being pushed from Git.
 
+* Jinja 
+
+    * Used to generate HTML from site templates
+
+* Werkzeug
+
+    * A python library to manage user management.
+
+* Heroku:
+
+    * Heroku is used for remote hosting the website.
+
+
+
 # **TESTING**
 
 [This section can be found here.](https://github.com/alisadiq91/middleEasternCookbook/blob/master/TESTING.md)
 
 # **DEPLOYMENT**
 
+## Heroku
+
+This project is hosted on Heroku. It has been set up so that each commit in the workspace automatically updates the deployed site on Heroku.
+
+* To create a heroku application, perform the following steps:
+
+1. Log in or create an account on [Heroku](https://www.heroku.com).
+
+2. On the dashboard, select 'new' and 'create new app'.
+
+3. Add an app name (this must be unique).
+
+4. Select the region closest to you.
+
+5. Click 'create app'.
+
+* Before you can begin to deploy, you must perform these steps:
+
+1. Select your app from the dashboard.
+
+2. Click 'settings'.
+
+3. Under 'config vars', click 'reveal config vars'.
+
+4. Add the KEY and VALUE from each variable eg ("IP", "0.0.0.0").
+
+* Once the variables are entered, follow these steps :
+
+1. You must create a requirements.txt file in your workspace so that Heroku knows which python modules to install.
+
+    * To do this, in your terminal type:  pip freeze > requirements.txt.
+
+2. Create a Procfile to tell Heroku the command to launch the app.
+
+    * To do this, in your terminal type: python app.py > Procfile.
+
+* After these steps, you can begin to deploy by following these steps:
+
+1. From the menu, select 'deploy'.
+
+2. Choose your deployment method, in this project I used Github.
+
+3. Select your GitHub account, and type the name of the repository and click 'search'.
+
+4. When it has found the correct repository, click 'Connect'.
+
+5. Below this, under the Manual deploy section, choose the branch you would like to deploy from (for this project I used Master)
+
+6. Click 'deploy branch'
+
+7. You will then be met with this message 'Your App has successfully deployed'
+
+* To automatically have each commit deploy to your Heroku app, follow these steps:
+
+1. Under the automatic deployment section, click 'Enable Automatic Deployment'
+
+
 ### I used GitPod to write my code.
 
 I regularly used Git Push to deploy this page to GitHub. Whenever I completed a page, fixed an error, or finished coding for the day, I would:
 
-    1. "git status" - this shows me a list of what has been edited.
+    1. 'git status' - this shows me a list of what has been edited.
 
-    2. "git add ." - to add what has been edited ready to commit.
+    2. 'git add -A' - to add what has been edited ready to commit.
 
-    3. "git commit -m" - this commits what was added ready to push.
+    3. 'git commit -m"reason for commit"' - this commits what was added ready to push and gives the reason for the commit.
 
-    4. "git push" - this deployed the changes above to the live site.
+    4. 'git push' - this deployed the changes above to the live site.
 
-### I used the information in this [webpage](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site) to create my GitHub pages site.
+To launch a Http server using the development mode code for the application, use the following command:
 
-The link above gave me the following steps.
-
-    1.  Log in to GitHub and locate the GitHub Repository.
-
-    2.  At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-
-    3.  Scroll down the Settings page until you locate the "GitHub Pages" Section.
-
-    4.  Under "Source", click the dropdown called "None" and select "Master Branch".
-
-    5.  The page will automatically refresh.
-
-    6.  Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+    python3 app.py
 
 ## How to run this project locally
 
@@ -590,7 +652,62 @@ The link above gave me the following steps.
 
 7. Press Enter. Your local clone will be created.
 
-## How I deployed this project to Heroku?
+8. Install requirements to your local IDE by typing the following into your CL:
+
+    * pip3 install -r requirements.txt
+
+9. Create a collection using [MongoDB](https://www.mongodb.com/)
+
+    * Login to your account
+
+    * Create a cluster
+
+    * Create a collection using the following structure:
+    
+        1. Collection Names - categories, recipes, users
+
+        2. Under Categories - there should be 4 objects :
+
+                1. category_name: "Starter"
+                2. category_name: "Sides"
+                3. category_name: "Mains"
+                4. category_name: "Dessert"
+
+10. Create a '.gitignore' file.
+
+11. Create an 'env.py' file.
+
+12. Add 'env.py' and 'pycache/' to the .gitignore file.
+
+13. The env.py file must contain the following code:
+
+        import os
+
+        os.environ.setdefault("IP", "0.0.0.0")
+        os.environ.setdefault("PORT", "5000")
+        os.environ.setdefault("SECRET_KEY", "[INSERT_ID]")
+        os.environ.setdefault("MONGO_URI", "[INSERT_ID]")
+        os.environ.setdefault("MONGO_DBNAME", "[INSERT_ID]")
+
+14. Where "INSERT_ID" is present, you must enter your own values, matching the config_vars on your Heroku app.
+
+    * The SECRET_KEY can be any value, I used [Random Key Gen](https://randomkeygen.com/).
+
+    * The MONGO_URI has to be taken from MongoDB.
+
+        1. Click the 'Overview' tab on your cluster.
+
+        2. Click 'Connect'.
+
+        3. Click 'Connect your application'.
+
+        4. Ensure you select the correct Python version you are using.
+
+        5. Copy the connection string.
+
+        6. Ensure you replace the Username and Password when you set up the Database Access.
+        
+    * The MONGO_DBNAME is the name of your database in MongoDB.
 
 # **CONTENT**
 
