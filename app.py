@@ -55,7 +55,7 @@ def not_found(e):
 def go_home():
     return render_template("home.html")
 
-# Recipe page showing all recipes    
+# Recipe page showing all recipes   
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())

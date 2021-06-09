@@ -45,12 +45,12 @@
             {% for recipe in recipes %}
             <div class="mb-5 border border-dark rounded">
                 <div class="row mb-5">   
-                    <div class="col-lg-6 col-sm-12">
+                    <div class="pl-4 pt-2 col-lg-6 col-sm-12">
                     <!--recipe image -->  
                         <img class="food-image" src="{{ recipe.food_img }}" alt="{{ recipe.food_name }} image uploaded by {{ recipe.created_by }}">
                     </div>
-                    <div class="col-lg-6 col-sm-12 other-text">
-                    <!--recipe details -->  
+                    <!--recipe details -->
+                    <div class="pl-1 col-lg-6 col-sm-12 other-text">
                         <h3><span class="font-weight-bold black-text">Food Name : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.food_name.capitalize() }}</h3>
                         <h4><span class="font-weight-bold black-text">Course : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.category_name }}</h4>
                         <h4><span class="font-weight-bold black-text">Description : </span><br> &nbsp; &nbsp; &nbsp;{{ recipe.description }}</h4>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col other-text text-left">
+                    <div class="pl-5 col other-text text-left">
                         <!--recipe ingredients and method -->  
                         <h4 class="font-weight-bold black-text">Ingredients needed : </h4>
                         <ol>

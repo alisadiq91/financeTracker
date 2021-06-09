@@ -181,17 +181,25 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 #### Recipe page screenshot
 
+![recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/recipe-desktop.png)
 
 #### Recipe page mobile screenshot
 
+![recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/recipe-mobile.png)
 
 ## Features
 
 1.  Search bar – A search bar is shown above the recipes for the user to be able to search any particular recipe they are looking for. Similar to the search bar in the navigation menu, it searches the database by text against recipe name and description. 
 
+![recipe-search](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/recipe-search.png)
+
 2.  The search bar also contains a filter button. Once clicked, a collapsed div is shown. The user can now filter the recipes by each course, and each difficulty level. There is also a reset button which takes the user back to the recipe page without any filters.
 
+![recipe-filter](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/recipe-filter.png)
+
 3.  If there are no results from the search by text, a flash message is shown to shown “No Recipes found!”, as well as a bootstrap button to link the user back to all the recipes. 
+
+![search-none](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/search-none.png)
 
 4.  Main section – this section contains all the recipes added to the database, unless the user has filtered using the search section.
 
@@ -201,10 +209,11 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 7. Edit/Delete – if the user is the creator of the recipe, bootstrap buttons are shown underneath to allow the user to edit or delete their recipe. Each delete button is followed by an alert to confirm whether the user would like to delete the recipe. If the user is logged in as admin, these buttons are shown on each recipe. 
 
+![recipe-edit-delete](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/recipe-edit-delete.png)
+
 8. Pagination – A pagination function has been set up to not have too many recipes showing on 1 page at a time. It has been set to show a maximum of 3 recipes on each page. The user can navigate through the pages at the bottom of the page using the numbered links. This is shown with a screenshot below:
 
 ![pagination](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/pagination.png)
-
 
 
 # **Login page**
@@ -235,11 +244,13 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 5.  Once the user has successfully logged in, a flash message is show to welcome the user by name and they are taken to their profile page. 
 
-6.  Forgot password?
-
-7. If a user is already logged in and tries to visit this page by editing the URL. They are met with this message:
+6. If a user is already logged in and tries to visit this page by editing the URL. They are met with this message:
 
 ![error-login](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-login.png)
+
+## Features to implement:
+
+1. I wanted to add a forgotten password feature where the user can recover their password through a link that is sent to their email. I did not have enough time to carry out this task but I definitely thought it was a good idea.
 
 #### **Login page desktop and mobile** 
 
@@ -351,16 +362,34 @@ These fields have font awesome icons to aid design.
 
 ![wireframe-add-edit-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/wf-add-mobile.jpeg)
 
+#### Add recipe page desktop
+
+![add-recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/add-recipe-desktop.png)
+
+#### Add recipe page mobile
+
+![add-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/add-recipe-mobile.png)
+
 ## Features
 
 1.	Form – this page contains a form for the user to add all the required details of the recipe they want to add. Each field is set to required. It contains 8 fields:
-a.	Image link to the food – contains a data tip that pops up when the user hovers over the font awesome icon, explaining to the user how to get their image address. 
+
+a.	Image link to the food – contains a data tip that pops up when the user hovers over the font awesome icon, explaining to the user how to get their image address.
+
+![data-tip](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/tip-window.png)
+
 b.	Recipe Name
+
 c.	Course – using a drop-down list.
+
 d.	Short description – set to a minimum length of 10 characters.
+
 e.	How long it takes to make? – field is set to only accept 0-9.
-f.	Difficulty level out of 5 – using a range slider.
+
+f.	Difficulty level out of 5 - using a drop-down list.
+
 g.	Ingredients – using JQuery, the user can add an ingredient by clicking the font awesome plus icon, which shows an input text field. They can delete any ingredient by clicking the font awesome cross icon.
+
 h.	Method – this input is exactly the same as the ingredients above, however the input field is larger. 
 
 2.	Once the recipe is added using the bootstrap button to submit the form, the user is returned to the recipe page with a flash image to let the user know their recipe has been successfully added. 
@@ -375,6 +404,14 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 * Frameworks, Libraries & Programs Used - Bootstrap, [Font Awesome](https://fontawesome.com/), Flask, MongoDB, JQuery
 
+#### Edit recipe page desktop
+
+![edit-recipe-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/edit-recipe-desktop.png)
+
+#### Edit recipe page mobile
+
+![edit-recipe-mobile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/edit-recipe-mobile.png)
+
 ## Features
 
 1.	This page is exactly the same as the add recipe page mentioned above. The only differences are :
@@ -386,6 +423,8 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 3. If a user tries to visit this page without being logged in (ie. edits the URL), they are met with this message:
 
 ![error-edit](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-edit.png)
+
+4. When the user submits their changes, they are shown just the recipe they have edited, on it's own on the page.
 
 # **Manage recipe page**
 
@@ -412,6 +451,14 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 3.	Recipe cards – The admin is shown all recipes added by all the users. Similar to the user profile page, they are shown a card with the recipe name (which they can click to reveal all the recipe’s details), a button to edit and delete the recipe, as well as who created the recipe. If the admin decides to delete the recipe, they are met with an alert to confirm this action is correct. 
 
 ![confirm-delete](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-delete.png)
+
+# **404 Error page**
+
+## Features
+
+1.	This page is shown when the user attempts to visit a URL that is not found on the website.
+
+![error-404](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-404.png)
 
 # **TECHNOLOGIES**
 
@@ -760,8 +807,6 @@ The link above gave me the following steps.
 
 * [Tooltip for add/edit recipe form] (https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box)
 
-* [Bootstrap slider] 
-(https://www.w3schools.com/howto/howto_js_rangeslider.asp)
 
 * [Bootstrap footer] (https://mdbootstrap.com/docs/standard/navigation/footer/)
 

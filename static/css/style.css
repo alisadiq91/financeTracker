@@ -11,7 +11,7 @@ html, body {
 }
 
 footer {
-    height: 122px;
+    height: 130px;
 }
 body{
     background-image: url("https://mk0kaleelao979sb1ktf.kinstacdn.com/wp-content/uploads/2019/08/shutterstock_1690553083-1536x1025.jpg");
@@ -222,44 +222,6 @@ https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box */
     margin-top: 5%;
     background-color: rgb(128, 128, 128, 0.9);
     font-family: 'crushed', sans-serif;
-}
-
-
-/* bootstrap slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
-/* The slider itself */
-
-.slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  width: 100%; /* Full-width */
-  height: 25px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle  */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background:yellow; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: yellow; /* Green background */
-  cursor: pointer; /* Cursor on hover */
 }
 
 /* add/edit recipe form method section width */
