@@ -448,6 +448,8 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 1. In the future, it would be a good idea to have a more interactive way to upload a picture of the food. This could be where the user can upload an image from their own files.
 
+2. With the above feature, I would also want to be able to limit the file size of the picture, the format and the dimensions to fit the page.
+
 # **Edit recipe page**
 
 * Languages used – HTML, CSS, Python, Javascript with JQuery
