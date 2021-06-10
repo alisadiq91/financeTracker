@@ -38,9 +38,7 @@ The website is called Eat Middle East. They are an online recipe database where 
 
   * [5. **Testing**](#testing)
 
-
   * [6. **Deployment**](#deployment)
-    + [Database Deployment](#database-deployment)
 
   * [7. **Content**](#content)
 
@@ -82,17 +80,17 @@ The website is called Eat Middle East. They are an online recipe database where 
 2.  As a Frequent User, I want to be able to view just the recipes I have added.
 
 Being a cooking enthusiast myself, I have used many cookbooks, varying from books to online versions.
-With me being interesteed in this sector, I know what the user wants, making it easy for me to provide this in a simple way.
+With me being interested in this sector, I know what the user wants, making it easy for me to provide this in a simple way.
 
 # **DESIGN**
 
 ## Colour Scheme
 
-* The two main colours used are grey and white.
+* The three main colours used are grey, white, and black.
 
 ## Typography
 
-* The Uncial Antiqua font (from google fonts) is the font used for the logo and the titles to each page. The Crushed font is the main font used for all other content. Sans Serif is used as the fallback font if for any reason the above fonts are not functioning. A snazzy, middle eastern theme is set which the Uncial Antiqua font achieves. The Crushed font is clear and easy to read. 
+* The Uncial Antiqua font (from google fonts) is the font used for the logo and the titles to each page. The Crushed font is the main font used for all other content. Sans Serif is used as the fall-back font if for any reason the above fonts are not functioning. A snazzy, middle eastern theme is set which the Uncial Antiqua font achieves. The Crushed font is clear and easy to read. 
 
 # **WIREFRAMES AND FEATURES**
 
