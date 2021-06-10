@@ -293,7 +293,7 @@
 
 * The website was viewed on a variety of devices such as Desktop, Laptop, iPhone11 (portrait and landscape), iPad (portrait and landscape), Samsung Galaxy S10 (portrait and landscape) and other android devices.
 
-* I used [responsinator](https://www.responsinator.com/) to make sure it responded to all devices.
+* I used [responsinator](https://www.responsinator.com/) and the chrome inspect extension tool to make sure it responded to all devices
 
 * Each link was clicked various times on each page and each device to ensure they were all working correctly.
 

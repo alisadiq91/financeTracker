@@ -37,10 +37,15 @@ The website is called Eat Middle East. They are an online recipe database where 
   * [4. **Technologies Used**](#Technologies)
 
   * [5. **Testing**](#testing)
+
+
   * [6. **Deployment**](#deployment)
     + [Database Deployment](#database-deployment)
+
   * [7. **Content**](#content)
+
   * [8. **Media**](#media)
+
   * [9. **Acknowledgements**](#acknowledgements)
 
 # **UX**
@@ -251,6 +256,9 @@ With me being interesteed in this sector, I know what the user wants, making it 
 
 ![pagination](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/pagination.png)
 
+## Features to implement
+
+1. I think it would be a good idea to allow users to be able to comment and give feedback on other users recipes.
 
 # **Login page**
 
@@ -376,6 +384,10 @@ These fields have font awesome icons to aid design.
 
 ![error-profile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-profile.png)
 
+## Features to implement 
+
+1. It would be a good idea to allow the user to edit their profile details from the profile page. If I had more time I would have actioned this.
+
 #### **Desktop**
 
 ![profile-recipes-desktop](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/profile-desktop-recipes.png)
@@ -491,6 +503,10 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 3.	Recipe cards – The admin is shown all recipes added by all the users. Similar to the user profile page, they are shown a card with the recipe name (which they can click to reveal all the recipe’s details), a button to edit and delete the recipe, as well as who created the recipe. If the admin decides to delete the recipe, they are met with an alert to confirm this action is correct. 
 
 ![confirm-delete](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-delete.png)
+
+## Features to implement
+
+1. I thought it would be a good idea for the admin to be able to send feedback to a user regarding their recipe. For example, if the users recipe is not considered middle eastern food, the admin can contact the user to discuss this with them, as oppose to just editing or deleting the recipe.
 
 # **404 Error page**
 
