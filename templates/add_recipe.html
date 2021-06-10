@@ -33,7 +33,7 @@
     <!--field for user to give a short description of food -->
         <div class="mb-3">
             <label for="description" class="form-label other-text"><i class="fas fa-pen-fancy"></i> Please provide a short description of the food</label>
-            <input type="text" class="form-control" minlength="10" maxlength="100" id="description" name="description" required>
+            <input type="text" class="form-control" minlength="10" maxlength="200" id="description" name="description" required>
         </div>
     <!--time taken to prepare and cook -->
         <div class="mb-3">
@@ -42,7 +42,7 @@
         </div>
     <!--recipe difficulty level -->
         <div class="mb-3">
-            <label for="difficulty" class="form-label mr-3 other-text"><i class="fas fa-star-half-alt"></i> How difficult is this recipe (On a scale of 1-5)</label>
+            <label for="difficulty" class="form-label mr-3 other-text"><i class="fas fa-star-half-alt"></i> How difficult is this recipe (On a scale of 1-5). 1 being the easiest and 5 the most difficult</label>
             <select class="form-control mt-3" id="difficulty" name="difficulty" required>
                 <option value="" disabled selected>Select Difficulty</option>
                 <option value="1" label="1"></option>
@@ -73,7 +73,7 @@
                     <li class="list-item">
                         <div class="input-field">
                             <i class="fas fa-times mr-4 remove-list-item"></i>
-                            <input name="method1" id="method1" class="method-form" type="text" maxlength="100" placeholder="Add method step..." required>
+                            <input name="method1" id="method1" class="method-form" type="text" placeholder="Add method step..." required>
                         </div>      
                     </li>
                     <i class="fas fa-plus add-method-list-item mr-4"></i>
