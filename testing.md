@@ -82,7 +82,7 @@
 
 ## Lighthouse
 
-* I used inspect on google chrome to use the Lighthouse tool to check the performance of my web pages. The performance results were all 95 or above. Below are the results for each webpage.
+* I used the inspect extension tool on google chrome to use the Lighthouse tool to check the performance of my web pages. The performance results were all 95 or above. Below are the results for each webpage.
 
 ### Home page
 ![lighthouse-home](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-home.png)
@@ -139,7 +139,7 @@
 
     * To fix this I created an <a> class around the remove-list-item class. I then moved the add ingredient class below the <li> element so it does not reappear with every added ingredient or method and so the new fields add below the current fields.
 
-    * The html and js code is shown below:
+    * The html and JQuery code is shown below:
 
     ![edit-bug-html](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/edit-bug-html.png)
 
@@ -285,7 +285,7 @@
 
 #### Result
 
-* The profile page shows the user all the recipes they have added as bootstrap cards. All the user has to do is click the name of the recipe to show it’s full details.
+* The profile page shows the user all the recipes they have added as bootstrap cards. All the user has to do is click the name of the recipe to show its full details.
 
 # **Further Testing**
 
@@ -299,4 +299,4 @@
 
 * All the forms were filled out numerous times. Each form was filled out deliberately with errors to see if the form validation was working correctly. 
 
-* I asked 10 family and friends to use the website and look for any errors or bugs. I asked them all to view the website on their laptop, phone and tablet. I also asked them to try all the links, and to fill the forms out with errors to see if it allowed them to submit.
+* I asked 10 family and friends to use the website and look for any errors or bugs. I asked them all to view the website on their laptop, phone, and tablet. I also asked them to try all the links, and to fill the forms out with errors to see if it allowed them to submit.

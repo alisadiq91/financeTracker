@@ -182,7 +182,7 @@ With me being interested in this sector, I know what the user wants, making it e
 
 1.  Main Container – this is a simple page inside a container. It contains a welcome title, to welcome the user to the website. The background for this container is set to an opacity of 0.9 so the user can see the text, as well as the image behind.
 
-2.  Slogan – underneath the welcome title, is a slogan to entice the user. It states “For you, made by you”. This tells the user that they can be a part of the website. 
+2.  Slogan – underneath the welcome title, is a slogan to entice the user. It states, “For you, made by you”. This tells the user that they can be a part of the website. 
 
 3.  Links – at the bottom of the container, are some bootstrap buttons linking the user to different pages on the website. If the user is not logged in, there are 3 links shown. The first to the recipe page to see all recipes, the second to login and the third to register. If the user is logged in, there are 2 links shown. The first to the recipe page again and the second to the add recipe page. 
 
@@ -240,7 +240,7 @@ With me being interested in this sector, I know what the user wants, making it e
 
 ![search-none](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/search-none.png)
 
-4.  Main section – this section contains all the recipes added to the database, unless the user has filtered using the search section.
+4.  Main section – this section contains all the recipes added to the database unless the user has filtered using the search section.
 
 5. Recipe details – the image of the food is set to the left of the main details of the recipe. These details include food name, course, description, difficulty level and time it takes to make. Underneath this section to the left is shown the ingredients and the method to make the food. On mobile devices, the image is above the main details to aid design.
 
@@ -256,7 +256,7 @@ With me being interested in this sector, I know what the user wants, making it e
 
 ## Features to implement
 
-1. I think it would be a good idea to allow users to be able to comment and give feedback on other users recipes.
+1. I think it would be a good idea to allow users to be able to comment and give feedback on other user's recipes.
 
 # **Login page**
 
@@ -284,7 +284,7 @@ With me being interested in this sector, I know what the user wants, making it e
 
 4.  Register – underneath the form, the user is shown where to Register in case they do not have an account already. 
 
-5.  Once the user has successfully logged in, a flash message is show to welcome the user by name and they are taken to their profile page. 
+5.  Once the user has successfully logged in, a flash message is shown to welcome the user by name and they are taken to their profile page. 
 
 6. If a user is already logged in and tries to visit this page by editing the URL. They are met with this message:
 
@@ -292,7 +292,7 @@ With me being interested in this sector, I know what the user wants, making it e
 
 ## Features to implement:
 
-1. I wanted to add a forgotten password feature where the user can recover their password through a link that is sent to their email. I did not have enough time to carry out this task but I definitely thought it was a good idea.
+1. I wanted to add a forgotten password feature where the user can recover their password through a link that is sent to their email. I did not have enough time to carry out this task, but I definitely thought it was a good idea.
 
 #### **Login page desktop and mobile** 
 
@@ -336,7 +336,7 @@ These fields have font awesome icons to aid design.
 
 4.	Patterns and information – the username and password fields only allow A-Z and 0-9 to be entered. The username must be between 5-15 characters, and the password 7-15 characters. This information is shown below the relative field for the user. 
 
-5.	Once the user registers, a flash message is shown to tell them they have successfully registered and they are taken to their profile page.  
+5.	Once the user registers, a flash message is shown to tell them they have successfully registered, and they are taken to their profile page.  
 
 #### **Desktop and Mobile view**
 
@@ -448,7 +448,7 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 1. In the future, it would be a good idea to have a more interactive way to upload a picture of the food. This could be where the user can upload an image from their own files.
 
-2. With the above feature, I would also want to be able to limit the file size of the picture, the format and the dimensions to fit the page.
+2. With the above feature, I would also want to be able to limit the file size of the picture, the format, and the dimensions to fit the page.
 
 # **Edit recipe page**
 
@@ -466,7 +466,7 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 ## Features
 
-1.	This page is exactly the same as the add recipe page mentioned above. The only differences are :
+1.	This page is exactly the same as the add recipe page mentioned above. The only differences are:
 
 a.	The input fields values are already filled with the recipe details from the recipe the user would like to edit.
 
@@ -476,7 +476,7 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 ![error-edit](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/error-edit.png)
 
-4. When the user submits their changes, they are shown just the recipe they have edited, on it's own on the page.
+4. When the user submits their changes, they are shown just the recipe they have edited, on its own on the page.
 
 # **Manage recipe page**
 
@@ -506,7 +506,7 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 ## Features to implement
 
-1. I thought it would be a good idea for the admin to be able to send feedback to a user regarding their recipe. For example, if the users recipe is not considered middle eastern food, the admin can contact the user to discuss this with them, as oppose to just editing or deleting the recipe.
+1. I thought it would be a good idea for the admin to be able to send feedback to a user regarding their recipe. For example, if the user's recipe is not considered middle eastern food, the admin can contact the user to discuss this with them, as oppose to just editing or deleting the recipe.
 
 # **404 Error page**
 
@@ -608,7 +608,7 @@ This project is hosted on Heroku. It has been set up so that each commit in the 
 
 4. Add the KEY and VALUE from each variable eg ("IP", "0.0.0.0").
 
-* Once the variables are entered, follow these steps :
+* Once the variables are entered, follow these steps:
 
 1. You must create a requirements.txt file in your workspace so that Heroku knows which python modules to install.
 
@@ -630,13 +630,13 @@ This project is hosted on Heroku. It has been set up so that each commit in the 
 
 5. Below this, under the Manual deploy section, choose the branch you would like to deploy from (for this project I used Master)
 
-6. Click 'deploy branch'
+6. Click 'deploy branch'.
 
-7. You will then be met with this message 'Your App has successfully deployed'
+7. You will then be met with this message 'Your App has successfully deployed'.
 
 * To automatically have each commit deploy to your Heroku app, follow these steps:
 
-1. Under the automatic deployment section, click 'Enable Automatic Deployment'
+1. Under the automatic deployment section, click 'Enable Automatic Deployment'.
 
 
 ### I used GitPod to write my code.
