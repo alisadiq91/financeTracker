@@ -1,3 +1,5 @@
+![logo](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/logo.png)
+
 # TESTING
 
 ## **Table of Contents**
