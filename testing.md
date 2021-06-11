@@ -160,7 +160,7 @@
 
 2. I had an issue where the input fields for the edit recipe form did not look the way I wanted. When extra ingredients were being added in addition to the pre-populated values from the database, the input fields were appearing in between the current fields.
 
-    * To fix this I created an <a> class around the remove-list-item class. I then moved the add ingredient class below the <li> element so it does not reappear with every added ingredient or method and so the new fields add below the current fields.
+    * To fix this I created a hyperlink element font awesome icons. I then moved the add ingredient class below the list element so it does not reappear with every added ingredient or method, and so the new fields add below the current fields.
 
     * The html and JQuery code is shown below:
 
