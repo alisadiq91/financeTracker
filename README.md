@@ -6,7 +6,7 @@
 
 ## **Project Overview**
 
-Welcome to the third project of my software development career. I have decided to create an online cookbook catered to middle eastern cuisine. The website will give users the opportunity to view, add, edit and delete recipes. Middle Eastern cuisine is one of my favourite, and I have a big passion for learning new recipes, therefore it is a project that I have a passion for. I will be using what I have learnt from the modules I have completed over the last few months. These include Python, the flask framework and MongoDB. I will also be using HTML, CSS, JavaScript, Jquery and the bootstrap framework, all of which I have used in previous projects. The main focus of this website is to create a CRUD application using Python. 
+Welcome to the third project of my software development career. I have decided to create an online cookbook catered to middle eastern cuisine. The website will give users the opportunity to view, add, edit, and delete recipes. Middle Eastern cuisine is one of my favourites, and I have a big passion for learning new recipes, therefore it is a project that I have a huge interest in. I will be using what I have learnt from the modules I have completed over the last few months. What I have learnt includes Python, the flask framework and how to use MongoDB. I will also be using HTML, CSS, JavaScript, Jquery and the bootstrap framework, all of which I have used in previous projects. The main focus of this website is to create a CRUD application using Python. 
 
 The website is called Eat Middle East. They are an online recipe database where users can register to make an account, add/edit/delete their own recipes, while viewing the recipes created by others.
 
@@ -734,17 +734,17 @@ To launch a Http server using the development mode code for the application, use
 
 ### All content was written by the coder apart form those listed below.
 
-* [Bootstrap register form] (https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-registration-form)
+* [Bootstrap register form](https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-registration-form)
 
-* [Bootstrap login form] (https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-login-form)
-
-
-* [Tooltip for add/edit recipe form] (https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box)
+* [Bootstrap login form](https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-login-form)
 
 
-* [Bootstrap footer] (https://mdbootstrap.com/docs/standard/navigation/footer/)
+* [Tooltip for add/edit recipe form](https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box)
 
-* [Pagination] (https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
+
+* [Bootstrap footer](https://mdbootstrap.com/docs/standard/navigation/footer/)
+
+* [Pagination](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9)
 
 
 # **MEDIA**
