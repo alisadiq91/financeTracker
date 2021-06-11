@@ -90,7 +90,13 @@ With me being interested in this sector, I know what the user wants, making it e
 
 ## Typography
 
-* The Uncial Antiqua font (from google fonts) is the font used for the logo and the titles to each page. The Crushed font is the main font used for all other content. Sans Serif is used as the fall-back font if for any reason the above fonts are not functioning. A snazzy, middle eastern theme is set which the Uncial Antiqua font achieves. The Crushed font is clear and easy to read. 
+* The Uncial Antiqua font (from google fonts) is the font used for the logo and the titles to each page.
+
+* The Crushed font is the main font used for all other content. 
+
+* Sans Serif is used as the fall-back font if for any reason the above fonts are not functioning. 
+
+* A snazzy, middle eastern theme is set which the Uncial Antiqua font achieves. The Crushed font is clear and easy to read.
 
 # **WIREFRAMES AND FEATURES**
 
@@ -130,11 +136,11 @@ With me being interested in this sector, I know what the user wants, making it e
 
 ### Header when a user is logged in:
 
-![header-user](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/header-desktop-logout.png)
+![header-user](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/header-desktop-login.png)
 
 4.  Each nav link has an icon from font awesome and changes colour to grey when hovering.
 
-## Features to implement:
+## Features considered or to implement:
 
 1. My initial idea was to have a login/register feature in the header. I decided against it for design purposes.
 
@@ -180,7 +186,7 @@ With me being interested in this sector, I know what the user wants, making it e
 
 ## Features
 
-1.  Main Container – this is a simple page inside a container. It contains a welcome title, to welcome the user to the website. The background for this container is set to an opacity of 0.9 so the user can see the text, as well as the image behind.
+1.  Main Container – this is a simple page which has a main container. This contains a welcome title, to welcome the user to the website. The background for this container is set to an opacity of 0.9 so the user can see the text, as well as the image behind.
 
 2.  Slogan – underneath the welcome title, is a slogan to entice the user. It states, “For you, made by you”. This tells the user that they can be a part of the website. 
 
@@ -316,19 +322,19 @@ With me being interested in this sector, I know what the user wants, making it e
 
 1.	Form – this page contains a simple form for the user to be able to register a new account. The form contains 5 fields:
 
-a.	Username
+            a.	Username
 
-b.	Password
+            b.	Password
 
-c.	Confirm Password (screenshot shown below)
+            c.	Confirm Password (screenshot shown below)
 
-![confirm-password](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-password.png)
+            ![confirm-password](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/confirm-password.png)
 
-d.	Cooking level – for the user to provide their experience level using a drop-down list.
+            d.	Cooking level – for the user to provide their experience level using a drop-down list.
 
-e.	Favourite food
+            e.	Favourite food
 
-These fields have font awesome icons to aid design.
+            These fields have font awesome icons to aid design.
 
 2. All fields are set to required, so the user is unable to submit the form without the required fields and formats.
 
@@ -420,23 +426,23 @@ These fields have font awesome icons to aid design.
 
 1.	Form – this page contains a form for the user to add all the required details of the recipe they want to add. Each field is set to required. It contains 8 fields:
 
-a.	Image link to the food – contains a data tip that pops up when the user hovers over the font awesome icon, explaining to the user how to get their image address.
+        a.	Image link to the food – contains a data tip that pops up when the user hovers over the font awesome icon, explaining to the user how to get their image address.
 
-![data-tip](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/tip-window.png)
+        ![data-tip](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/tip-window.png)
 
-b.	Recipe Name
+        b.	Recipe Name
 
-c.	Course – using a drop-down list.
+        c.	Course – using a drop-down list.
 
-d.	Short description – set to a minimum length of 10 characters.
+        d.	Short description – set to a minimum length of 10 characters.
 
-e.	How long it takes to make? – field is set to only accept 0-9.
+        e.	How long it takes to make? – field is set to only accept 0-9.
 
-f.	Difficulty level out of 5 - using a drop-down list.
+        f.	Difficulty level out of 5 - using a drop-down list.
 
-g.	Ingredients – using JQuery, the user can add an ingredient by clicking the font awesome plus icon, which shows an input text field. They can delete any ingredient by clicking the font awesome cross icon.
+        g.	Ingredients – using JQuery, the user can add an ingredient by clicking the font awesome plus icon, which shows an input text field. They can delete any ingredient by clicking the font awesome cross icon.
 
-h.	Method – this input is exactly the same as the ingredients above, however the input field is larger. 
+        h.	Method – this input is exactly the same as the ingredients above, however the input field is larger. 
 
 2.	Once the recipe is added using the bootstrap button to submit the form, the user is returned to the recipe page with a flash image to let the user know their recipe has been successfully added. 
 
@@ -468,9 +474,9 @@ h.	Method – this input is exactly the same as the ingredients above, however t
 
 1.	This page is exactly the same as the add recipe page mentioned above. The only differences are:
 
-a.	The input fields values are already filled with the recipe details from the recipe the user would like to edit.
+        a.	The input fields values are already filled with the recipe details from the recipe the user would like to edit.
 
-b.	The bootstrap buttons below now are Cancel, which takes the user back to the recipe page, or Submit changes, which gives the user a flash message to let them know their recipe has been updated.
+        b.	The bootstrap buttons below now are Cancel, which takes the user back to the recipe page, or Submit changes, which gives the user a flash message to let them know their recipe has been updated.
 
 3. If a user tries to visit this page without being logged in (ie. edits the URL), they are met with this message:
 
@@ -506,7 +512,7 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 ## Features to implement
 
-1. I thought it would be a good idea for the admin to be able to send feedback to a user regarding their recipe. For example, if the user's recipe is not considered middle eastern food, the admin can contact the user to discuss this with them, as oppose to just editing or deleting the recipe.
+1. I thought it would be a good idea for the admin to be able to send feedback to a user regarding their recipe. For example, if the user's recipe is not considered middle eastern food, the admin can contact the user to discuss this with them, as opposed to just editing or deleting the recipe.
 
 # **404 Error page**
 
@@ -536,11 +542,11 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 * Google Fonts:
 
-    * Google fonts were used for both Roboto-condensed and Raleway fonts.
+    * Google fonts were used for both Uncial Antiqua and Crushed fonts.
 
 * Font Awesome:
 
-    * Font Awesome was used in the header and footer on each page, with social media links, app download links, and images alongside various captions and titles.
+    * Font Awesome was regularly on the website, in the header, footer, forms, and also the bootstrap buttons.
 
 * JQuery:
 
@@ -564,7 +570,7 @@ b.	The bootstrap buttons below now are Cancel, which takes the user back to the 
 
 * Jinja 
 
-    * Used to generate HTML from site templates
+    * Used to generate HTML from site templates.
 
 * Werkzeug
 
@@ -588,55 +594,55 @@ This project is hosted on Heroku. It has been set up so that each commit in the 
 
 * To create a heroku application, perform the following steps:
 
-1. Log in or create an account on [Heroku](https://www.heroku.com).
+    1. Log in or create an account on [Heroku](https://www.heroku.com).
 
-2. On the dashboard, select 'new' and 'create new app'.
+    2. On the dashboard, select 'new' and 'create new app'.
 
-3. Add an app name (this must be unique).
+    3. Add an app name (this must be unique).
 
-4. Select the region closest to you.
+    4. Select the region closest to you.
 
-5. Click 'create app'.
+    5. Click 'create app'.
 
 * Before you can begin to deploy, you must perform these steps:
 
-1. Select your app from the dashboard.
+    1. Select your app from the dashboard.
 
-2. Click 'settings'.
+    2. Click 'settings'.
 
-3. Under 'config vars', click 'reveal config vars'.
+    3. Under 'config vars', click 'reveal config vars'.
 
-4. Add the KEY and VALUE from each variable eg ("IP", "0.0.0.0").
+    4. Add the KEY and VALUE from each variable eg ("IP", "0.0.0.0").
 
 * Once the variables are entered, follow these steps:
 
-1. You must create a requirements.txt file in your workspace so that Heroku knows which python modules to install.
+    1. You must create a requirements.txt file in your workspace so that Heroku knows which python modules to install.
 
-    * To do this, in your terminal type:  pip freeze > requirements.txt.
+        * To do this, in your terminal type:  pip freeze --local > requirements.txt.
 
-2. Create a Procfile to tell Heroku the command to launch the app.
+    2. Create a Procfile to tell Heroku the command to launch the app.
 
-    * To do this, in your terminal type: python app.py > Procfile.
+        * To do this, in your terminal type: python app.py > Procfile.
 
 * After these steps, you can begin to deploy by following these steps:
 
-1. From the menu, select 'deploy'.
+    1. From the menu, select 'deploy'.
 
-2. Choose your deployment method, in this project I used Github.
+    2. Choose your deployment method, in this project I used Github.
 
-3. Select your GitHub account, and type the name of the repository and click 'search'.
+    3. Select your GitHub account, and type the name of the repository and click 'search'.
 
-4. When it has found the correct repository, click 'Connect'.
+    4. When it has found the correct repository, click 'Connect'.
 
-5. Below this, under the Manual deploy section, choose the branch you would like to deploy from (for this project I used Master)
+    5. Below this, under the Manual deploy section, choose the branch you would like to deploy from (for this project I used Master)
 
-6. Click 'deploy branch'.
+    6. Click 'deploy branch'.
 
-7. You will then be met with this message 'Your App has successfully deployed'.
+    7. You will then be met with this message 'Your App has successfully deployed'.
 
-* To automatically have each commit deploy to your Heroku app, follow these steps:
+* To automatically have each commit deploy to your Heroku app, follow this step:
 
-1. Under the automatic deployment section, click 'Enable Automatic Deployment'.
+    1. Under the automatic deployment section, click 'Enable Automatic Deployment'.
 
 
 ### I used GitPod to write my code.
@@ -714,7 +720,7 @@ To launch a Http server using the development mode code for the application, use
 
     * The SECRET_KEY can be any value, I used [Random Key Gen](https://randomkeygen.com/).
 
-    * The MONGO_URI has to be taken from MongoDB.
+    * The MONGO_URI has to be taken from MongoDB:
 
         1. Click the 'Overview' tab on your cluster.
 
@@ -726,7 +732,7 @@ To launch a Http server using the development mode code for the application, use
 
         5. Copy the connection string.
 
-        6. Ensure you replace the Username and Password when you set up the Database Access.
+        6. Ensure you replace the Username and Password with the correct values that were used when you set up the Database Access.
         
     * The MONGO_DBNAME is the name of your database in MongoDB.
 
@@ -738,9 +744,7 @@ To launch a Http server using the development mode code for the application, use
 
 * [Bootstrap login form](https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-login-form)
 
-
 * [Tooltip for add/edit recipe form](https://stackoverflow.com/questions/19480010/adding-a-tooltip-to-an-input-box)
-
 
 * [Bootstrap footer](https://mdbootstrap.com/docs/standard/navigation/footer/)
 
