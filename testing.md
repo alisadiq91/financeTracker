@@ -27,73 +27,73 @@
 
 * No errors or warnings were found.
 
-![html-home](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-home.png)
+![html-home](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-home.png)
 
 #### **Recipe page**
 
 * No errors or warnings were found.
 
-![html-recipe](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-recipes.png)
+![html-recipe](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-recipes.png)
 
 #### **Login page**
 
 * No errors or warnings were found.
 
-![html-login](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-login.png)
+![html-login](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-login.png)
 
 #### **Register page**
 
 * No errors or warnings were found.
 
-![html-register](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-register.png)
+![html-register](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-register.png)
 
 #### **Profile page**
 
 * No errors or warnings were found. 
 
-![html-profile](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-profile.png)
+![html-profile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-profile.png)
 
 #### **Add recipe page**
 
 * No errors or warnings were found. 
 
-![html-add](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-add.png)
+![html-add](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-add.png)
 
 #### **Edit recipe page**
 
 * No errors or warnings were found. 
 
-![html-edit](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-edit.png)
+![html-edit](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-edit.png)
 
 #### **Filtered recipes page**
 
 * No errors or warnings were found. 
 
-![html-filter](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-filter.png)
+![html-filter](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-filter.png)
 
 #### **Single recipe page**
 
 * No errors or warnings were found. 
 
-![html-single](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-single.png)
+![html-single](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-single.png)
 
 #### **Manage page**
 
 * No errors or warnings were found. 
 
-![html-manage](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-manage.png)
+![html-manage](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-manage.png)
 
 #### **404 error page**
 
 * No errors or warnings were found. 
 
-![html-404](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/html-404.png)
+![html-404](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/html-404.png)
 
 ## CSS validation
 
 * The errors found were with the bootstrap model, as well as the warnings found.
 
-![css-validator](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/css-validator.png)
+![css-validator](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/css-validator.png)
 
 ## JavaScript code quality tool
 
@@ -101,40 +101,40 @@
 
 * There were no errors for script.js
 
-![js-hint](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/js-hint.png)
+![js-hint](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/js-hint.png)
 
 ## Lighthouse
 
 * I used the inspect extension tool on google chrome to use the Lighthouse tool to check the performance of my web pages. The performance results were all 95 or above. Below are the results for each webpage.
 
 ### Home page
-![lighthouse-home](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-home.png)
+![lighthouse-home](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-home.png)
 
 ### Recipe page
-![lighthouse-recipes](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-recipe.png)
+![lighthouse-recipes](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-recipe.png)
 
 ### Login page
-![lighthouse-login](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-login.png)
+![lighthouse-login](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-login.png)
 
 
 ### Register page
-![lighthouse-register](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-register.png)
+![lighthouse-register](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-register.png)
 
 
 ### Profile page
-![lighthouse-profile](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-profile.png)
+![lighthouse-profile](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-profile.png)
 
 
 ### Add recipe page
-![lighthouse-add](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-add.png)
+![lighthouse-add](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-add.png)
 
 
 ### Edit recipe page
-![lighthouse-edit](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-edit.png)
+![lighthouse-edit](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-edit.png)
 
 
 ### Manage recipe page
-![lighthouse-manage](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/lighthouse-manage.png)
+![lighthouse-manage](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/lighthouse-manage.png)
 
 
 ## PEP8 Validation
@@ -143,7 +143,7 @@
 
 * The results showed no errors or warnings:
 
-![pep8](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/validation/pep8.png)
+![pep8](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/validation/pep8.png)
 
 
 ## Bugs 
@@ -156,7 +156,7 @@
 
     * The code is shown below:
 
-    ![filter-bug](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/python-filter.png)
+    ![filter-bug](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/python-filter.png)
 
 2. I had an issue where the input fields for the edit recipe form did not look the way I wanted. When extra ingredients were being added in addition to the pre-populated values from the database, the input fields were appearing in between the current fields.
 
@@ -164,9 +164,9 @@
 
     * The html and JQuery code is shown below:
 
-    ![edit-bug-html](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/edit-bug-html.png)
+    ![edit-bug-html](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/edit-bug-html.png)
 
-    ![edit-bug-js](https://github.com/alisadiq91/middleEasternCookbook/tree/master/assets/images/edit-bug-js.png)
+    ![edit-bug-js](https://github.com/alisadiq91/middleEasternCookbook/blob/master/assets/images/edit-bug-js.png)
 
 
 # **UX Testing**
